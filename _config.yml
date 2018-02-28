@@ -1,0 +1,8 @@
+title: codeworx.at
+include: [vendor]
+vendor:
+   _internal: Template
+excerpt_separator: <!-- more -->
+description: codeworxs description
+url: https://www.codeworx.at
+lang: de

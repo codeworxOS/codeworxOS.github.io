@@ -1,0 +1,42 @@
+<!-- JS Global Compulsory -->
+<script src="{{ site.baseurl }}/Template/vendor/jquery/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/Template/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+<script src="{{ site.baseurl }}/Template/vendor/popper.min.js"></script>
+<script src="{{ site.baseurl }}/Template/vendor/bootstrap/bootstrap.min.js"></script>
+
+<!-- JS Implementing Plugins -->
+<script src="{{ site.baseurl }}/Template/vendor/appear.js"></script>
+<script src="{{ site.baseurl }}/Template/vendor/slick-carousel/slick/slick.js"></script>
+
+<!-- JS Unify -->
+<script src="{{ site.baseurl }}/Template/js/hs.core.js"></script>
+<script src="{{ site.baseurl }}/Template/js/components/hs.header.js"></script>
+<script src="{{ site.baseurl }}/Template/js/helpers/hs.hamburgers.js"></script>
+<script src="{{ site.baseurl }}/Template/js/components/hs.scroll-nav.js"></script>
+<script src="{{ site.baseurl }}/Template/js/helpers/hs.height-calc.js"></script>
+<script src="{{ site.baseurl }}/Template/js/components/hs.go-to.js"></script>
+<script src="{{ site.baseurl }}/Template/js/components/hs.carousel.js"></script>
+
+<!-- JS Plugins Init. -->
+<script>
+	$(document).on('ready', function () {
+        $.HSCore.components.HSCarousel.init('.js-carousel');
+
+		// initialization of header
+		$.HSCore.components.HSHeader.init($('#js-header'));
+		$.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+		// initialization of header height offset
+		$.HSCore.helpers.HSHeightCalc.init();
+
+		// initialization of go to section
+		$.HSCore.components.HSGoTo.init('.js-go-to');
+	});
+
+    $(window).on('load', function() {
+		// initialization of HSScrollNav
+		$.HSCore.components.HSScrollNav.init($('.js-smooth-scroll'), {
+			duration: 700
+		});
+	});
+</script>

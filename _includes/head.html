@@ -1,0 +1,18 @@
+<!-- Basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% if page.title %}
+<title>codeworx.at | {{ page.title }}</title>
+{% else %}
+<title>codeworx.at</title>
+{% endif %}
+
+<meta name="keywords" content="codeworx, codeworx.at, Schwarz, Raphael, Raphael Schwarz, .NET, C#, Software-Entwicklung" /> {% if page.excerpt %}
+<meta name="description" content="{{ page.excerpt | markdownify | strip_html }}" /> {% elsif page.description %}
+<meta name="description" content="{{ page.description }}" /> {% else %}
+<meta name="description" content="{{ page.content | markdownify | strip_html | truncatewords:30 }}" /> {% endif %}
+
+<meta name="author" content="codeworx" />
+
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

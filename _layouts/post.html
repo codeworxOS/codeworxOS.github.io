@@ -1,0 +1,30 @@
+---
+layout: default
+---   
+
+<dic class="post">
+	<div class="container detail-content">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a class="a-breadcrumb" href="{{ site.baseurl }}/">Home</a></li>
+			<li class="breadcrumb-item"><a class="a-breadcrumb" href="{{ site.baseurl }}/Blog">Blogposts</a></li>				
+			<li class="breadcrumb-item active">{{ page.title }}</li>
+		</ol>
+
+		<div class="container-blogpost">
+			<div class="container-text">		
+				<p class="blogpost_text">
+					{{ content }}
+				</p>
+			</div>
+			<div class="sidebar">
+				<h1 class="text-left">{{ page.title }}</h1> 		  
+				<img src="{{ site.baseurl }}/{{ page.image }}" width="700" height="450" alt="" class="img-responsive"/> 
+				<div class="info-sidebar">
+					<div class="author"><i class="fa fa-pencil" aria-hidden="true"></i> <p class="text-sidebar">{{ page.author }}</p> </div>	 
+					<div class="date"><i class="fa fa-clock-o" aria-hidden="true"></i> <p class="text-sidebar">{{ page.date | date: "%d.%m.%Y" }}</p> </div>
+					<div class="category"><i class="fa fa-bars" aria-hidden="true"></i> <p class="text-sidebar">{{ page.categories }}</p> </div>
+				</div> 
+			</div> 
+		</div>
+	</div>
+</div>
