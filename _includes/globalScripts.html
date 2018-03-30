@@ -33,10 +33,11 @@
 		$.HSCore.components.HSGoTo.init('.js-go-to');
 	});
 
-    $(window).on('load', function() {
-		// initialization of HSScrollNav
-		$.HSCore.components.HSScrollNav.init($('.js-smooth-scroll'), {
-			duration: 700
-		});
+      $(window).on('load', function() {
+        // initialization of HSScrollNav
+        $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
+          duration: 700
+        });
+      });
 	});
 </script>
