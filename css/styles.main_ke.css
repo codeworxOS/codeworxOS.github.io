@@ -53,6 +53,14 @@ Impressum-Page Start */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------
 Main-Page Start */
 
+.g-theme-bg-gray-dark-v1 {
+  background-color: #999;
+}
+
+.g-theme-brd-gray-dark-v2 {
+  border-color: #909090 !important;
+}
+
 .hamburger {
   padding-top: 21px;
 }
@@ -203,7 +211,7 @@ Animated Blog Slider Start */
 
 .u-header .active .nav-link {
 	color: #a11613 !important;
-	font-weight: bold;
+	font-weight: 700 !important;
 }
 
 .u-btn-primary {
@@ -1240,6 +1248,17 @@ h6,
 .job .js-header-change-moment.g-bg-primary-semi-transparent--shift {
   background-color: rgba(161, 22, 19, 0.9);
 }
+
+.u-header__section--dark .navbar-nav:not([class*="u-main-nav-v"]) .nav-link{
+  color: white;
+  font-weight: 600;
+}
+
+.u-header__section--dark .navbar-nav:not([class*="u-main-nav-v"]) .nav-link:hover {
+  color: #d2d2d2;
+}
+
+
 /*------------------------------------
   Heading
 ------------------------------------*/
@@ -3371,7 +3390,9 @@ Project-Page Start*/
 
 .project .bg-grey {
 	background-color: #555;
-	padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
 }
 
 .project h3 {
