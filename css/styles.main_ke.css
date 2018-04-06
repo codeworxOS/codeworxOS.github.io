@@ -53,8 +53,8 @@ Impressum-Page Start */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------
 Main-Page Start */
 
-.g-brd-white-opacity-0_2 {
-  border-color: #c4c4c4 !important;
+.g-brd-grey-opacity-0_2 {
+  border-color: rgba(153, 153, 153, 0.5);
 }
 
 .g-theme-bg-gray-dark-v4--hover:hover {
@@ -3319,6 +3319,10 @@ Blogpost-Page Start*/
 /* --------------------------------------------------------------------------------------------------------------------------------------------
 Project-Page Start*/
 
+.w100 {
+  width: 100% !important;
+}
+
 .project .imageHeader {
   top: 0px;
   width: 100%;
@@ -3327,7 +3331,6 @@ Project-Page Start*/
 }
 
 .project img {
-  width: 100% !important;
   height: 100%;
   object-fit: cover;
 }
