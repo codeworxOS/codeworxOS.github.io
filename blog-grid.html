@@ -106,15 +106,26 @@
 <!-- End Header v1 -->  
 <div class="grid">
   <main>
-
+      <div class="imageHeader">
+          <img src="blog/images/HEADERblog.jpg">
+      </div>
+      <div class="container">
+          <div class="grid-intro">
+            <h1 class="text-center">Alle Blogeinträge</h1>
+            <p class="intro text-center text-muted">{{page.description}}</p>
+          </div>
+          <div>
+            <!-- Breadcrubs by KE start -->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="a-breadcrumb" href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Blogposts</li>
+              </ol>	
+            <!-- Breadcrubs by KE end -->	
+          </div>	
+        </div>
     <!-- Blog Background Overlay Blocks -->
     <div class="container g-pb-20 detail-container">
-		<!-- Breadcrubs by KE start -->
-			<ol class="breadcrumb">
-			  <li class="breadcrumb-item"><a class="a-breadcrumb" href="index.html">Home</a></li>
-			  <li class="breadcrumb-item active">Blogposts</li>
-			</ol>	
-		<!-- Breadcrubs by KE end -->			
+		
       <div class="row justify-content-between">
         <div class="col-lg-9 g-mb-80">
           <div class="g-pr-20--lg">
@@ -428,7 +439,7 @@
     <!-- Footer -->
     <div id="contacts-section" class="g-bg-black-opacity-0_9 g-color-white-opacity-0_8 g-py-60">
       <div class="container pt-0">
-        <div class="row">
+        <div class="row g-bg-black-opacity-0_9">
           <!-- Footer Content -->
           <div class="col-lg-3 col-md-6 g-mb-40 g-mb-0--lg">
             <div class="u-heading-v2-3--bottom g-brd-white-opacity-0_8 g-mb-20">
