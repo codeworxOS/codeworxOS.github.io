@@ -11,12 +11,35 @@ CSS für Template Start */
 /* ----------------------------------------------
 Extraseiten START */
 
+.imageHeader {
+  padding-top: 9rem;
+}
+
+h1 {
+  color: #1b1b1b;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2.14286rem !important;
+  padding-top: 5rem;
+}
+
+.intro {
+  max-width: 1140px;
+  margin-bottom: 4rem;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  background: linear-gradient(transparent, 10%, rgba(255, 255, 255, 0.9));
+  padding-bottom: 1rem;
+}
+
 .breadcrumb {
 	background-color: transparent;
 	border: none;
 	padding-left: 0px;
 	font-size: 12px;
-	margin-bottom: 50px;
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 .a-breadcrumb {
@@ -329,7 +352,6 @@ Animated Blog Slider Start */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------
 Jobdescription-Page Start */
 
-
 /*------------------------------------
   ergänzt KE 
 ------------------------------------*/
@@ -348,10 +370,6 @@ Jobdescription-Page Start */
 
 .job .text-red {
 	color: #a11613; 
-}
-
-.job .container {
-  padding-top: 11rem;
 }
 
 .job .fa {
@@ -1775,30 +1793,6 @@ input[type="radio"]:checked + * .job .g-overlay-primary-0_9--checked::after,
   Bloggrid-Page START
 ------------------------------------*/
 
-.grid h1 {
-	color: #1b1b1b;
-	font-size: 30px;
-	text-transform: uppercase;
-	font-weight: 700;
-	margin-bottom: 2.14286rem !important;
-
-}
-
-.grid .imageHeader {
-  top: 0px;
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-}
-
-.grid .grid-intro {
-	text-align: center;
-	max-width: 770px;
-	margin: auto;
-  margin-bottom: 4rem;
-  padding-top: 5rem;
-}
-
 .side:hover {
   background-color: #f7f7f7;
   font-weight: 600;
@@ -1818,11 +1812,6 @@ input[type="radio"]:checked + * .job .g-overlay-primary-0_9--checked::after,
   border-color: #cf1c18 !important;
 }
 
-.grid .container {
-  margin-top: 9rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  background: linear-gradient(transparent, 10%, white);
-}
 
 .grid .fa {
   font-size: 20px;
@@ -3351,13 +3340,6 @@ Project-Page Start*/
   width: 100% !important;
 }
 
-.project .imageHeader {
-  top: 0px;
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-}
-
 .project img {
   height: 100%;
   object-fit: cover;
@@ -3366,7 +3348,6 @@ Project-Page Start*/
 .project .container {
 	max-width: 1140px;
   padding-top: 0rem;
-  margin-top: 9rem;
   padding-bottom: 7rem;
   background-color: rgba(255, 255, 255, 0.7);
   background: linear-gradient(transparent, 10%, white);
@@ -3385,23 +3366,6 @@ Project-Page Start*/
 
 .project a:hover {
 	color: #999;
-}
-
-.project .project-intro {
-	text-align: center;
-	max-width: 770px;
-	margin: auto;
-  margin-bottom: 4rem;
-  padding-top: 5rem;
-}
-
-.project h1 {
-	color: #1b1b1b;
-	font-size: 30px;
-	text-transform: uppercase;
-	font-weight: 700;
-	margin-bottom: 2.14286rem !important;
-
 }
 
 .project .project-text {

@@ -3,7 +3,13 @@ layout: default
 ---   
 
 <dic class="post">
-	<div class="container detail-content">
+	<div class="imageHeader" style="background-image:url(/img/HEADERblog.jpg);">
+		<div class="intro text-center">
+			<h1 class="text-center">{{ page.title }}</h1>
+			<p class="text-center text-muted">Kurze Beschreibung</p>
+		</div>	
+	</div>	
+	<div class="container">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a class="a-breadcrumb" href="{{ site.baseurl }}/">Home</a></li>
 			<li class="breadcrumb-item"><a class="a-breadcrumb" href="{{ site.baseurl }}/Blog">Blogposts</a></li>				
@@ -16,8 +22,7 @@ layout: default
 					{{ content }}
 				</p>
 			</div>
-			<div class="sidebar">
-				<h1 class="text-left">{{ page.title }}</h1> 		  
+			<div class="sidebar">	  
 				<img src="{{ site.baseurl }}/{{ page.image }}" width="700" height="450" alt="" class="img-responsive"/> 
 				<div class="info-sidebar">
 					<div class="author"><i class="fa fa-pencil" aria-hidden="true"></i> <p class="text-sidebar">{{ page.author }}</p> </div>	 
