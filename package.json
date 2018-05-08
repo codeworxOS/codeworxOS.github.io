@@ -1,0 +1,24 @@
+{
+  "name": "codeworx.at",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeworxOS/codeworxOS.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeworxOS/codeworxOS.github.io/issues"
+  },
+  "homepage": "https://github.com/codeworxOS/codeworxOS.github.io#readme",
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}
