@@ -24,7 +24,7 @@ var styleFiles = [
     'Template/vendor/animate.css',
     'Template/vendor/slick-carousel/slick/slick.css',
     'Template/css/styles.op-accounting.css',
-    'css/styles.main_ke.css" type="text/css'
+    'css/styles.main_ke.css'
 ]
 
 var jsDest = 'js';
