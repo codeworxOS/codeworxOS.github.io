@@ -17,12 +17,25 @@ var jsFiles = [
     'Template/js/components/hs.carousel.js'
 ]
 
+var styleFiles = [
+    'Template/vendor/bootstrap/bootstrap.min.css',
+    'Template/vendor/icon-hs/style.css',
+    'Template/vendor/hamburgers/hamburgers.min.css',
+    'Template/vendor/animate.css',
+    'Template/vendor/slick-carousel/slick/slick.css',
+    'Template/css/styles.op-accounting.css',
+    'css/styles.main_ke.css" type="text/css'
+]
+
 var jsDest = 'js';
+var cssDest = 'css';
 
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var minifyCSS = require('gulp-minify-css');
+
 
 gulp.task('bundle:scripts', function () {
     return gulp.src(jsFiles)
@@ -31,4 +44,13 @@ gulp.task('bundle:scripts', function () {
         .pipe(rename('scripts.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest(jsDest));
+});
+
+gulp.task('bundle:styles', function () {
+    return gulp.src(styleFiles)
+        .pipe(concat('styles.css'))
+        .pipe(gulp.dest(cssDest))
+        .pipe(rename('styles.min.css'))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest(cssDest));
 });
