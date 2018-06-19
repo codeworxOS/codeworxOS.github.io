@@ -1,8 +1,21 @@
+collections:
+  landingpage:
+    output: false
+defaults:
+  - scope:
+      path: ""
+      type: landingpage
+    values:
+      lang: en
 title: codeworx.at
 include: [vendor]
 vendor:
    _internal: Template
 excerpt_separator: <!-- more -->
+lang: de
 description: codeworxs description
 url: https://www.codeworx.at
-lang: de
+languages: [de,en]
+langlink:
+  de: /
+  en: /en

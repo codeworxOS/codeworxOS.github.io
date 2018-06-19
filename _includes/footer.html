@@ -2,7 +2,7 @@
 	&quot;bottom&quot;: 15,
 	&quot;right&quot;: 15
   }" data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn" style="display: none; position: fixed; bottom: 15px; right: 15px; opacity: 0;">
-	 <i class="mr-2 fa fa-angle-double-up wt-hover fontsize25 pb-0"></i>
+	<i class="mr-2 fa fa-angle-double-up wt-hover fontsize25 pb-0"></i>
 </a>
 
 <footer class="g-bg-black-opacity-0_8">
@@ -15,6 +15,10 @@
 		</div>
 		<div class="col-md-4 text-center">
 			<a href="{{ site.baseurl }}/Impressum">Impressum</a>
+			{% for l in site.languages %}
+			<a href="{{ site.baseurl }}{{site.langlink[l]}}">{{l}}</a>
+			{% endfor %}
+		
 		</div>
-	</div>  
+	</div>
 </footer>

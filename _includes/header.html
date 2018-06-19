@@ -1,14 +1,11 @@
 <!-- Header v1 -->
-<header id="js-header" class="u-header u-header--sticky-top u-header--change-appearance"
-        data-header-fix-moment="100">
-  <div class="u-header__section u-header__section--dark g-bg-black-opacity-0_3 g-transition-0_3 g-py-20"
-        data-header-fix-moment-exclude="g-bg-black-opacity-0_3 g-py-20"
-        data-header-fix-moment-classes="g-bg-black-opacity-0_8 g-py-10">
+<header id="js-header" class="u-header u-header--sticky-top u-header--change-appearance" data-header-fix-moment="100">
+  <div class="u-header__section u-header__section--dark g-bg-black-opacity-0_3 g-transition-0_3 g-py-20" data-header-fix-moment-exclude="g-bg-black-opacity-0_3 g-py-20"
+    data-header-fix-moment-classes="g-bg-black-opacity-0_8 g-py-10">
     <nav class="navbar navbar-expand-lg">
       <div class="container g-pos-rel">
         <!-- Logo -->
-        <a href="#!" class="js-go-to navbar-brand u-header__logo g-width-130 g-mr-60"
-            data-type="static">
+        <a href="#!" class="js-go-to navbar-brand u-header__logo g-width-130 g-mr-60" data-type="static">
           <img class="u-header__logo-img u-header__logo-img--main" src="{{ site.baseurl }}/Template/img/Logo.svg" alt="Image Description">
         </a>
         <!-- End Logo -->
@@ -17,8 +14,19 @@
           <!-- Navigation -->
           <div class="navbar-collapse align-items-center flex-sm-row">
             <ul Id="js-scroll-nav" class="navbar-nav text-uppercase g-font-weight-700 g-font-size-13 g-py-20 g-py-0--lg">
-              <li class="nav-item g-mr-10--lg g-mr-15--xl g-my-7 g-mb-0--lg active">
-                <a href="#home" class="nav-link p-0 text-center">Home <span class="sr-only">(current)</span></a>
+              {% assign items = site.landingpage | where: "lang", page.lang %} {% for lp in items %}
+              <li class="nav-item g-mx-10--lg g-mx-15--xl g-my-7 g-mb-0--lg">
+                <a href="#{{lp.ancor}}" class="nav-link p-0 text-center">{{lp.caption}} 
+                  {% if forloop.index == 0 %}
+                  <span class="sr-only">(current)</span>
+                  {% endif %}
+                </a>
+              </li>
+              {% endfor %}
+              <!-- <li class="nav-item g-mr-10--lg g-mr-15--xl g-my-7 g-mb-0--lg active">
+                <a href="#home" class="nav-link p-0 text-center">Home
+                  <span class="sr-only">(current)</span>
+                </a>
               </li>
               <li class="nav-item g-mx-10--lg g-mx-15--xl g-my-7 g-mb-0--lg">
                 <a href="#about" class="nav-link p-0 text-center">About</a>
@@ -30,15 +38,9 @@
                 <a href="#ourProjects" class="nav-link p-0 text-center">Projects</a>
               </li>
               <li class="nav-item g-mx-10--lg g-mx-15--xl g-my-7 g-mb-0--lg">
-                <a href="#testimonials" class="nav-link p-0 text-center">Contact</a>
-  </li>
-        <!--   <li class="nav-item g-mx-10--lg g-mx-15--xl g-my-7 g-mb-0--lg">
-                <a href="#bestOffers" class="nav-link p-0">Best offers</a>
-              </li>
-              <li class="nav-item g-ml-10--lg g-ml-15--xl g-my-7 g-mb-0--lg">
-                <a href="#contact" class="nav-link p-0">Contact</a>
+                <a href="#contact" class="nav-link p-0 text-center">Contact</a>
               </li> -->
-            </ul> 
+            </ul>
           </div>
           <!-- End Navigation -->
 
@@ -46,12 +48,8 @@
         </div>
 
         <!-- Responsive Toggle Button -->
-        <button class="navbar-toggler btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-5 g-right-0" type="button"
-                aria-label="Toggle navigation"
-                aria-expanded="false"
-                aria-controls="navBar"
-                data-toggle="collapse"
-                data-target="#navBar">
+        <button class="navbar-toggler btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-5 g-right-0" type="button" aria-label="Toggle navigation"
+          aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
           <span class="hamburger hamburger--slider">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
