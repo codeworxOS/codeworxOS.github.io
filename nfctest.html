@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NFC test</title>
+</head>
+<body>
+
+<script>
+if ("NDEFReader" in window) {
+  alert('HasReader');
+  const reader = new NDEFReader();
+  await reader.scan();
+  reader.onreading = ({ message }) => {
+    console.log(`Message read from a NFC tag: ${message}`);
+  };
+}
+</script>
+</body>
+</html>
