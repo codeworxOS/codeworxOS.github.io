@@ -30,7 +30,7 @@
     $.HSCore.components.HSGMap.init('.js-g-map');
   }
 
-  $(document).on('ready', function () {
+  function initDoc(){
     // initialization of carousel
     $('#carousel5').on('click', '.js-thumb', function (e) {
       e.stopPropagation();
@@ -52,13 +52,24 @@
 
     // initialization of go to section
     $.HSCore.components.HSGoTo.init('.js-go-to');
-  });
 
-  $(window).on('load', function () {
     // initialization of HSScrollNav
     $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
       duration: 700
     });
+  }
+
+  $(document).on('ready', function () {
+
+  });
+
+  $(window).on('load', function () {
+    // initialization of HSScrollNav
+
+      // // $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
+      // //   duration: 700
+      // // });
+      initDoc();
   });
 
 </script>

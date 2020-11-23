@@ -4,113 +4,30 @@ ancor: home
 lang: de 
 ---
 
+{% assign items = site.promo | where: "lang", page.lang %}
+
 <section id="{{page.ancor}}" class="js-carousel g-overflow-hidden g-max-height-100vh" data-autoplay="true" data-infinite="true"
   data-speed="15000" data-pagi-classes="u-carousel-indicators-v29 container text-center text-uppercase g-absolute-centered--x g-bottom-50 g-line-height-1_2 g-font-size-12 g-color-white g-brd-grey-opacity-0_2">
-  <div class="js-slide" data-title="Blog">
+
+  {% for p in items %}
+  <div class="js-slide" data-title="{{p.caption}}">
     <!-- Promo Block -->
-    <div class="g-flex-centered g-height-100vh g-min-height-500--md g-bg-cover g-bg-pos-center g-bg-img-hero" style="background-image: url(img/HOMEblog.jpg);">
-      <div class="container text-center g-z-index-1">
-        <!-- <h2 class="text-uppercase g-font-weight-700 g-font-size-22 g-font-size-36--md g-color-white g-mb-20">We are a accounting firm unify
-
-          <br> providing
-
-          <span class="g-color-primary">{{site.lang}}</span> and
-
-          <span class="g-color-primary">accounting</span> services
-
-        </h2>
-        <p class="g-hidden-xs-down g-max-width-645 g-color-white-opacity-0_9 mx-auto g-mb-35">This is where we sit down, grab a cup of coffee and dial in the details. Understanding the task at hand and ironing
-          out the wrinkles is key. Now that we've aligned the details, it's time to get things mapped out and organized.</p> -->
-        
-        <div class="animated-blog container-fluid px-0">
-          <div style="z-index:10000;" class="js-carousel g-line-height-0" data-infinite="true" data-autoplay="true" data-speed="5000"
-            data-rows="1" data-slides-show="4" data-responsive='[{
-          "breakpoint": 1200,
-          "settings": {
-            "slidesToShow": 4
-          }
-          }, {
-          "breakpoint": 992,
-          "settings": {
-            "slidesToShow": 3
-          }
-          }, {
-          "breakpoint": 768,
-          "settings": {
-            "slidesToShow": 2
-          }
-          }, {
-          "breakpoint": 570,
-          "settings": {
-            "slidesToShow": 1
-          }
-          }]'>
-            {% for post in site.posts %}
-
-            <div class="js-slide index-post">
-              <div class="blog-img-overlay g-parent g-pos-rel g-overflow-hidden">
-                <img class="img-fluid g-transition-0_3 g-transition--ease-in" src="{{ site.baseurl }}{{post.image}}" alt="{{ post.title }}">
-                <div class="overlay">
-                  <p class="text-small-date">{{ post.date }}</p>
-                  <br>
-                  <a class="text-blogtitle" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                  <br>
-                  <p class="text-small">{{ post.author }}</p>
-                </div>
-              </div>
-              {% endfor %}
-
-            </div>
-          </div>
-
-        </div>
-        <a class="btn btn-lg u-btn-primary g-font-weight-700 g-font-size-12 text-uppercase g-rounded-50 g-px-40 g-py-15" href="blog-grid.html"
-          target="_blank">View Blogposts</a>
-
-      </div>
-    </div>
-    <!-- End Promo Block -->
-  </div>
-  <div class="js-slide" data-title="Projekte">
-    <!-- Promo Block -->
-    <div class="transition js-smooth-scroll g-flex-centered g-height-100vh g-min-height-500--md g-bg-cover g-bg-pos-center g-bg-img-hero"
-      style="background-image: url(img/HOMEprojekte.jpg);">
-      <div class="container text-center g-z-index-1">
+    <div class="g-flex-centered g-height-100vh g-min-height-500--md g-bg-cover g-bg-pos-center g-bg-img-hero home-image" 
+    style="background-image: url('{{p.image}}');">
+      <!-- <div class="container text-center g-z-index-1">
         <h2 class="text-uppercase g-font-weight-700 g-font-size-22 g-font-size-36--md g-color-white g-mb-20">We are a accounting firm unify
-
           <br> providing
-
           <span class="g-color-primary">tax</span> and
-
           <span class="g-color-primary">accounting</span> services
-
-        </h2>
-        <p class="g-hidden-xs-down g-max-width-645 g-color-white-opacity-0_9 mx-auto g-mb-35">This is where we sit down, grab a cup of coffee and dial in the details. Understanding the task at hand and ironing
-          out the wrinkles is key. Now that we've aligned the details, it's time to get things mapped out and organized.</p>
-        <a class="btn btn-lg u-btn-primary g-font-weight-700 g-font-size-12 text-uppercase g-rounded-50 g-px-40 g-py-15" href="#ourProjects">View Projects</a>
-      </div>
-    </div>
-    <!-- End Promo Block -->
-  </div>
-  <div class="js-slide" data-title="Jobs">
-    <!-- Promo Block -->
-    <div class="g-flex-centered g-height-100vh g-min-height-500--md g-bg-cover g-bg-pos-center g-bg-img-hero" style="background-image: url(img/HOMEjobs.jpg);">
-      <div class="container text-center g-z-index-1">
-        <h2 class="text-uppercase g-font-weight-700 g-font-size-22 g-font-size-36--md g-color-white g-mb-20">We are a accounting firm unify
-
-          <br> providing
-
-          <span class="g-color-primary">tax</span> and
-
-          <span class="g-color-primary">accounting</span> services
-
         </h2>
         <p class="g-hidden-xs-down g-max-width-645 g-color-white-opacity-0_9 mx-auto g-mb-35">This is where we sit down, grab a cup of coffee and dial in the details. Understanding the task at hand and ironing
           out the wrinkles is key. Now that we've aligned the details, it's time to get things mapped out and organized.</p>
         <a class="btn btn-lg u-btn-primary g-font-weight-700 g-font-size-12 text-uppercase g-rounded-50 g-px-40 g-py-15" href="job-description.html"
           target="_blank">View Jobs</a>
-      </div>
-    </div>
+      </div>-->
+    </div> 
     <!-- End Promo Block -->
   </div>
+  {% endfor %}
+
 </section>

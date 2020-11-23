@@ -1,10 +1,17 @@
 collections:
   landingpage:
     output: false
+  promo:
+    output: false
 defaults:
   - scope:
       path: ""
       type: landingpage
+    values:
+      lang: en
+  - scope:
+      path: ""
+      type: promo
     values:
       lang: en
 title: codeworx.at
