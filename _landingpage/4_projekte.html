@@ -4,7 +4,7 @@ caption: Projekte
 lang: de
 ---
 
-{% assign projects = site.pages | where: "page-category", "project" | sort: "title" %}
+{% assign projects = site.projects | where: "lang", page.lang %}
 
 <!-- Section Content -->
 <section id="{{page.ancor}}" class="g-py-90">
@@ -15,16 +15,12 @@ lang: de
     </div>
   </div>
   <div class="container">
-    <div class="container-arrows">
-      <i class="mr-2 fa fa-angle-left"></i>
-      <i class="mr-2 fa fa-angle-right"></i>
-    </div>
     <div class="row">
       {% for project in projects %}
 
       <div class="col-md-4 g-mb-30 g-mb-0--md">
         <article class="g-bg-gray-light-v5">
-          <img class="img-fluid w-100" src="{{ site.baseurl }}/projects/images/{{ project.image }}" alt="Image description">
+          <img class="img-fluid w-100" src="{{ site.baseurl }}{{ project.image }}" alt="Image description">
           <div class="g-pa-30">
             <h3 class="text-uppercase g-font-weight-700 g-font-size-default g-mb-20">
               <a class="g-color-gray-dark-v1 g-color-primary--hover" href="{{ site.baseurl }}{{project.url}}">{{project.title}}</a>

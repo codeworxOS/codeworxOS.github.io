@@ -37,6 +37,11 @@ var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
 
 
+gulp.task('watch', function () {
+    return gulp.watch('css/styles.main_ke.css', gulp.series('bundle:styles'));
+});
+
+
 gulp.task('bundle:scripts', function () {
     return gulp.src(jsFiles)
         .pipe(concat('scripts.js'))

@@ -7,26 +7,19 @@ lang: de
 {% assign items = site.promo | where: "lang", page.lang %}
 
 <section id="{{page.ancor}}" class="js-carousel g-overflow-hidden g-max-height-100vh" data-autoplay="true" data-infinite="true"
-  data-speed="15000" data-pagi-classes="u-carousel-indicators-v29 container text-center text-uppercase g-absolute-centered--x g-bottom-50 g-line-height-1_2 g-font-size-12 g-color-white g-brd-grey-opacity-0_2">
+  data-speed="15000" data-pagi-classes="u-carousel-indicators-v29 container g-absolute-centered--x g-bottom-50 g-line-height-1_2 g-font-size-12 g-color-white g-brd-grey-opacity-0_2">
 
   {% for p in items %}
   <div class="js-slide" data-title="{{p.caption}}">
-    <!-- Promo Block -->
-    <div class="g-flex-centered g-height-100vh g-min-height-500--md g-bg-cover g-bg-pos-center g-bg-img-hero home-image" 
+    <div class="g-height-100vh g-min-height-500--md g-bg-pos-center g-bg-img-hero home-image" 
     style="background-image: url('{{p.image}}');">
-      <!-- <div class="container text-center g-z-index-1">
-        <h2 class="text-uppercase g-font-weight-700 g-font-size-22 g-font-size-36--md g-color-white g-mb-20">We are a accounting firm unify
-          <br> providing
-          <span class="g-color-primary">tax</span> and
-          <span class="g-color-primary">accounting</span> services
-        </h2>
-        <p class="g-hidden-xs-down g-max-width-645 g-color-white-opacity-0_9 mx-auto g-mb-35">This is where we sit down, grab a cup of coffee and dial in the details. Understanding the task at hand and ironing
-          out the wrinkles is key. Now that we've aligned the details, it's time to get things mapped out and organized.</p>
-        <a class="btn btn-lg u-btn-primary g-font-weight-700 g-font-size-12 text-uppercase g-rounded-50 g-px-40 g-py-15" href="job-description.html"
-          target="_blank">View Jobs</a>
-      </div>-->
+      <div class="container position-relative promo-container">
+        <div class="promo-content text-right">
+          <h2 class="g-font-weight-700 g-font-size-30 text-white"><span>{{p.headline | newline_to_br }}</span></h2>
+          <a class="btn btn-lg u-btn-primary g-font-weight-700 g-font-size-16 g-rounded-50 g-px-40 g-py-15" href="{{p.button-url}}">{{p.button-text}}</a>
+        </div>
+      </div> 
     </div> 
-    <!-- End Promo Block -->
   </div>
   {% endfor %}
 

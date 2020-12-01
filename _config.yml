@@ -3,13 +3,25 @@ collections:
     output: false
   promo:
     output: false
+  projects:
+    output: true
+    sort_by: date
 defaults:
-  - scope:
+  -
+    scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      lang: en
+  -
+    scope:
       path: ""
       type: landingpage
     values:
       lang: en
-  - scope:
+  -
+    scope:
       path: ""
       type: promo
     values:
