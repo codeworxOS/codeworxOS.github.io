@@ -100,7 +100,7 @@
           $gMap;
 
         //Map Type
-        if (gMapType == 'satellite') {
+        if (gMapType === 'satellite') {
           $gMap = new google.maps.Map(document.getElementById(ID), {
             zoom: gMapZoom ? gMapZoom : config['zoom'],
             scrollwheel: config['scrollwheel']
@@ -112,7 +112,7 @@
           });
 
           $gMap.setMapTypeId(google.maps.MapTypeId.SATELLITE);
-        } else if (gMapType == 'terrain') {
+        } else if (gMapType === 'terrain') {
           $gMap = new google.maps.Map(document.getElementById(ID), {
             zoom: gMapZoom ? gMapZoom : config['zoom'],
             scrollwheel: config['scrollwheel']
@@ -124,7 +124,19 @@
           });
 
           $gMap.setMapTypeId(google.maps.MapTypeId.TERRAIN);
-        } else if (gMapType == 'street-view') {
+        } else if (gMapType === 'roadmap') {
+          $gMap = new google.maps.Map(document.getElementById(ID), {
+            zoom: gMapZoom ? gMapZoom : config['zoom'],
+            scrollwheel: config['scrollwheel']
+          });
+
+          $gMap.setCenter({
+            lat: gMapLat,
+            lng: gMapLng
+          });
+
+          $gMap.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+        } else if (gMapType === 'street-view') {
           $gMap = new google.maps.StreetViewPanorama(document.getElementById(ID), {
             zoom: gMapZoom ? gMapZoom : config['zoom'],
             scrollwheel: config['scrollwheel']
@@ -134,7 +146,7 @@
             lat: gMapLat,
             lng: gMapLng
           });
-        } else if (gMapType == 'static') {
+        } else if (gMapType === 'static') {
           $(document).ready(function () {
             $gMap = GMaps.staticMapURL({
               size: [2048, 2048],
@@ -145,7 +157,7 @@
 
             $('#' + ID).css('background-image', 'url(' + $gMap + ')');
           });
-        } else if (gMapType == 'custom') {
+        } else if (gMapType === 'custom') {
           var arrL = gMapStyles.length;
 
           for (var i = 0; i < arrL; i++) {
@@ -209,7 +221,7 @@
         //End Map Type
 
         //Pin
-        if (gMapPin && gMapType == 'satellite' || gMapType == 'terrain' || gMapType == 'street-view') {
+        if (gMapPin && gMapType === 'satellite' || gMapType === 'terrain' || gMapType === 'roadmap' || gMapType === 'street-view') {
           //Variables
           var $pin = new google.maps.Marker({
             position: {
@@ -233,7 +245,7 @@
         //End Pin
 
         //Multiple markers
-        if (gMapMultipleMarkers == true) {
+        if (gMapMultipleMarkers === true) {
           var infowindow = new google.maps.InfoWindow(),
             marker,
             i2;
@@ -355,7 +367,7 @@
               GMaps.geocode({
                 address: $(gMapCordsTarget).val().trim(),
                 callback: function (results, status) {
-                  if (status == 'OK') {
+                  if (status === 'OK') {
                     var latlng = results[0].geometry.location;
 
                     $gMap.setCenter(latlng.lat(), latlng.lng());

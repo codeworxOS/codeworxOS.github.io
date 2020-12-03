@@ -2,7 +2,7 @@
 var jsFiles = [
     'Template/vendor/jquery/jquery.min.js',
     'Template/vendor/jquery-migrate/jquery-migrate.min.js',
-    'Template/vendor/popper.min.js',
+    'Template/vendor/popper.js/popper.min.js',
     'Template/vendor/bootstrap/bootstrap.min.js',
     'Template/vendor/gmaps/gmaps.min.js',
     'Template/vendor/appear.js',
@@ -24,7 +24,8 @@ var styleFiles = [
     'Template/vendor/animate.css',
     'Template/vendor/slick-carousel/slick/slick.css',
     'Template/css/styles.op-accounting.css',
-    'css/styles.main_ke.css'
+    'css/styles.main_ke.css',
+    'css/styles.main.custom.css'
 ]
 
 var jsDest = 'js';
@@ -38,7 +39,7 @@ var minifyCSS = require('gulp-minify-css');
 
 
 gulp.task('watch', function () {
-    return gulp.watch('css/styles.main_ke.css', gulp.series('bundle:styles'));
+    return gulp.watch('css/styles.main*.css', gulp.series('bundle:styles'));
 });
 
 

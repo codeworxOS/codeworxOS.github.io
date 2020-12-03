@@ -1,0 +1,62 @@
+.u-header__logo
+{
+    width: 130px;
+	padding-top: 18px;
+}
+
+/* Banner - Promo -start */
+
+.promo-image {
+    background-clip: content-box;
+    padding-top: 100px;
+      padding-bottom: 8rem;
+  }
+  
+  @media(max-width: 576px){
+    .promo-image {
+      padding-bottom: 0;
+    }
+  }  
+
+  .g-bg-cover::after {
+    content: none;
+  }
+
+  .promo-container
+{
+  height: 100%;
+}
+
+.promo-content
+{
+  position: absolute;
+  bottom: 8rem;
+  right: 10px;
+}
+
+.promo-content h2 {
+  line-height:1.3;
+  margin-bottom: 2rem;
+}
+.promo-content h2 span
+{
+  background-color: #a11613;
+  -webkit-box-decoration-break: clone;
+  -ms-box-decoration-break: clone;
+  -o-box-decoration-break: clone;
+  box-decoration-break: clone;
+  box-shadow: 10px 0 0 #a11613, -10px 0 0 #a11613;
+}
+
+.promo-content .u-btn-primary
+{
+  background-color: #fff;
+  color: #a11613;
+}
+
+.promo-content .u-btn-primary:hover
+{
+  background-color: #a11613;
+  color: #fff;
+}
+/* Banner - Promo - end */

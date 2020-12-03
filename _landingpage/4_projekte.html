@@ -6,55 +6,30 @@ lang: de
 
 {% assign projects = site.projects | where: "lang", page.lang %}
 
-<!-- Section Content -->
-<section id="{{page.ancor}}" class="g-py-90">
+<section id="{{page.ancor}}" class="container g-pt-100 g-pb-60">
   <div class="text-center g-mb-60">
     <div class="container g-max-width-770">
-      <h2 class="text-uppercase g-line-height-1 g-font-weight-700 g-font-size-30 g-color-gray-dark-v1 g-mb-30">Unsere Projekte</h2>
-      <p class="mb-0">Eine Auswahl an Projekten, die wir bereits zur Zufriedenheit unserer Kunden umgesetzt haben.</p>
+      <h2 class="h2 g-color-gray-dark-v1 g-font-weight-600 mb-2">Projekte</h2>
+      <div class="d-inline-block g-width-30 g-height-2 g-bg-primary mb-2"></div>
+      <p class="lead mb-0">We are a creative studio focusing on culture, luxury, editorial &amp; art. Somewhere between sophistication and simplicity.</p>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      {% for project in projects %}
-
-      <div class="col-md-4 g-mb-30 g-mb-0--md">
-        <article class="g-bg-gray-light-v5">
-          <img class="img-fluid w-100" src="{{ site.baseurl }}{{ project.image }}" alt="Image description">
-          <div class="g-pa-30">
-            <h3 class="text-uppercase g-font-weight-700 g-font-size-default g-mb-20">
-              <a class="g-color-gray-dark-v1 g-color-primary--hover" href="{{ site.baseurl }}{{project.url}}">{{project.title}}</a>
-            </h3>
-            <p class="mb-0">{{project.description}}</p>
-          </div>
-        </article>
-      </div>
-      {% endfor %}
-
+  <div class="row">
+    {% for project in projects %}
+    <div class="col-sm-6 col-lg-4 g-mb-30">
+      <!-- Blog Grid Overlap Blocks -->
+      <article>
+        <img class="img-fluid w-100" src="{{ site.baseurl }}{{ project.image }}" alt="Image Description">
+        <div class="g-width-80x g-bg-white g-pos-rel g-z-index-1 g-pa-30 g-mt-minus-50 mx-auto">
+          <h2 class="h5 g-color-black g-font-weight-600 mb-3">
+              <a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="{{ site.baseurl }}{{ project.url }}">{{project.title}}</a>
+            </h2>
+          <p class="g-color-gray-dark-v4 g-line-height-1_8">{{project.description}}</p>
+          <a class="g-font-size-13" href="{{ site.baseurl }}{{ project.url }}">mehr info...</a>
+        </div>
+      </article>
+      <!-- End Blog Grid Overlap Blocks -->
     </div>
-  </div>
-</section>
-<section class="text-center g-theme-bg-gray-light-v2 g-py-90">
-  <div class="container">
-    <div class="row g-brd-top g-brd-left g-theme-brd-gray-light-v1 mx-0">
-      <div class="col-sm-6 col-md-4 col-lg-2 g-flex-centered g-brd-bottom g-brd-right g-theme-brd-gray-light-v1 g-py-50">
-        <img class="g-width-120" src="Template/img-temp/Xx74/img1.png" alt="Image Description">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 g-flex-centered g-brd-bottom g-brd-right g-theme-brd-gray-light-v1 g-py-50">
-        <img class="g-width-120" src="Template/img-temp/Xx74/img2.png" alt="Image Description">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 g-flex-centered g-brd-bottom g-brd-right g-theme-brd-gray-light-v1 g-py-50">
-        <img class="g-width-120" src="Template/img-temp/Xx74/img3.png" alt="Image Description">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 g-flex-centered g-brd-bottom g-brd-right g-theme-brd-gray-light-v1 g-py-50">
-        <img class="g-width-120" src="Template/img-temp/Xx74/img4.png" alt="Image Description">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 g-flex-centered g-brd-bottom g-brd-right g-theme-brd-gray-light-v1 g-py-50">
-        <img class="g-width-120" src="Template/img-temp/Xx74/img5.png" alt="Image Description">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 g-flex-centered g-brd-bottom g-brd-right g-theme-brd-gray-light-v1 g-py-50">
-        <img class="g-width-120" src="Template/img-temp/Xx74/img6.png" alt="Image Description">
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>

@@ -6,111 +6,30 @@ lang: en
 
 {% assign projects = site.projects | where: "lang", page.lang %}
 
-<!-- Section Content -->
-<section id="{{page.ancor}}" class="g-py-90">
+<section id="{{page.ancor}}" class="container g-pt-100 g-pb-60">
   <div class="text-center g-mb-60">
     <div class="container g-max-width-770">
-      <h2 class="text-uppercase g-line-height-1 g-font-weight-700 g-font-size-30 g-color-gray-dark-v1 g-mb-30">Our projects</h2>
-      <p class="mb-0">Cras luctus blandit sapien eget varius. Ut egestas justo faucibus laoreet fringilla. Pellentesque dictum, massa ut
-        consequat euismod, tortor diam cursus nulla, a rhoncus justo mi ut diam.</p>
+      <h2 class="h2 g-color-gray-dark-v1 g-font-weight-600 mb-2">Our projects</h2>
+      <div class="d-inline-block g-width-30 g-height-2 g-bg-primary mb-2"></div>
+      <p class="lead mb-0">We are a creative studio focusing on culture, luxury, editorial &amp; art. Somewhere between sophistication and simplicity.</p>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      {% for project in projects %}
-
-      <div class="col-md-4 g-mb-30 g-mb-0--md">
-        <article class="g-bg-gray-light-v5">
-          <img class="img-fluid w-100" src="{{ site.baseurl }}{{ project.image }}" alt="Image description">
-          <div class="g-pa-30">
-            <h3 class="text-uppercase g-font-weight-700 g-font-size-default g-mb-20">
-              <a class="g-color-gray-dark-v1 g-color-primary--hover" href="{{ site.baseurl }}{{project.url}}">{{project.title}}</a>
-            </h3>
-            <p class="mb-0">{{project.description}}</p>
-          </div>
-        </article>
-      </div>
-      {% endfor %}
-
-    </div>
-  </div>
-</section>
-<!-- End Section Content -->
-<!-- Section Content -->
-<section class="g-theme-bg-gray-light-v2 g-py-90">
-  <div class="text-center g-mb-60">
-    <div class="container g-max-width-770">
-      <h2 class="text-uppercase g-line-height-1 g-font-weight-700 g-font-size-30 g-color-gray-dark-v1 g-mb-30">Our tax and accounting system</h2>
-      <p class="mb-0">Nulla facilisi. Integer consectetur elit sit amet urna sollicitudin bibendum. Morbi a suscipit ipsum. Suspendisse mollis
-        libero ante. Pellentesque finibus convallis nulla vel placerat.</p>
-    </div>
-  </div>
-  <div class="container">
-    <!-- Icon Blocks -->
-    <div class="row">
-      <div class="col-md-4 g-mb-30">
-        <!-- Icon Blocks -->
-        <div class="text-center">
-          <span class="u-icon-v2 g-width-80 g-height-80 g-font-weight-600 g-font-size-30 g-color-gray-dark-v3 g-brd-3 g-brd-primary g-rounded-50x g-mb-25">
-            <i class="g-font-style-normal">1</i>
-          </span>
-          <h3 class="text-uppercase g-font-weight-700 g-font-size-default g-color-gray-dark-v1 g-mb-15">Meet your accountant</h3>
-          <p class="mb-0">Integer accumsan maximus leo, et consectetur metus vestibulum in. Vestibulum viverra justo odio. Donec eu nulla
-            leo. Nullam eget felis non sapien blandit efficitur</p>
+  <div class="row">
+    {% for project in projects %}
+    <div class="col-sm-6 col-lg-4 g-mb-30">
+      <!-- Blog Grid Overlap Blocks -->
+      <article>
+        <img class="img-fluid w-100" src="{{ site.baseurl }}{{ project.image }}" alt="Image Description">
+        <div class="g-width-80x g-bg-white g-pos-rel g-z-index-1 g-pa-30 g-mt-minus-50 mx-auto">
+          <h2 class="h5 g-color-black g-font-weight-600 mb-3">
+              <a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="{{ site.baseurl }}{{ project.url }}">{{project.title}}</a>
+            </h2>
+          <p class="g-color-gray-dark-v4 g-line-height-1_8">{{project.description}}</p>
+          <a class="g-font-size-13" href="{{ site.baseurl }}{{ project.url }}">Read more...</a>
         </div>
-        <!-- End Icon Blocks -->
-      </div>
-      <div class="col-md-4 g-mb-30">
-        <!-- Icon Blocks -->
-        <div class="text-center">
-          <span class="u-icon-v2 g-width-80 g-height-80 g-font-weight-600 g-font-size-30 g-color-gray-dark-v3 g-brd-3 g-brd-primary g-rounded-50x g-mb-25">
-            <i class="g-font-style-normal">2</i>
-          </span>
-          <h3 class="text-uppercase g-font-weight-700 g-font-size-default g-color-gray-dark-v1 g-mb-15">Connect bank &amp; credit cards</h3>
-          <p class="mb-0">Aenean volutpat erat quis mollis accumsan. Mauris at cursus ipsum. Praesent molestie imperdiet purus. Nullam eget
-            felis non sapien blandit efficitur</p>
-        </div>
-        <!-- End Icon Blocks -->
-      </div>
-      <div class="col-md-4">
-        <!-- Icon Blocks -->
-        <div class="text-center">
-          <span class="u-icon-v2 g-width-80 g-height-80 g-font-weight-600 g-font-size-30 g-color-gray-dark-v3 g-brd-3 g-brd-primary g-rounded-50x g-mb-25">
-            <i class="g-font-style-normal">3</i>
-          </span>
-          <h3 class="text-uppercase g-font-weight-700 g-font-size-default g-color-gray-dark-v1 g-mb-15">Set up system</h3>
-          <p class="mb-0">Duis tristique bibendum nunc ut semper. Phasellus bibendum semper lectus, in ornare erat tempus eget. Nullam eget
-            felis non sapien blandit efficitur</p>
-        </div>
-        <!-- End Icon Blocks -->
-      </div>
+      </article>
+      <!-- End Blog Grid Overlap Blocks -->
     </div>
-    <!-- End Icon Blocks -->
-  </div>
-</section>
-<!-- End Section Content -->
-<!-- Clients -->
-<section class="text-center g-py-90">
-  <div class="container">
-    <div class="row g-brd-top g-brd-left g-theme-brd-gray-light-v1 mx-0">
-      <div class="col-sm-6 col-md-4 col-lg-2 g-flex-centered g-brd-bottom g-brd-right g-theme-brd-gray-light-v1 g-py-50">
-        <img class="g-width-120" src="Template/img-temp/Xx74/img1.png" alt="Image Description">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 g-flex-centered g-brd-bottom g-brd-right g-theme-brd-gray-light-v1 g-py-50">
-        <img class="g-width-120" src="Template/img-temp/Xx74/img2.png" alt="Image Description">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 g-flex-centered g-brd-bottom g-brd-right g-theme-brd-gray-light-v1 g-py-50">
-        <img class="g-width-120" src="Template/img-temp/Xx74/img3.png" alt="Image Description">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 g-flex-centered g-brd-bottom g-brd-right g-theme-brd-gray-light-v1 g-py-50">
-        <img class="g-width-120" src="Template/img-temp/Xx74/img4.png" alt="Image Description">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 g-flex-centered g-brd-bottom g-brd-right g-theme-brd-gray-light-v1 g-py-50">
-        <img class="g-width-120" src="Template/img-temp/Xx74/img5.png" alt="Image Description">
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-2 g-flex-centered g-brd-bottom g-brd-right g-theme-brd-gray-light-v1 g-py-50">
-        <img class="g-width-120" src="Template/img-temp/Xx74/img6.png" alt="Image Description">
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>

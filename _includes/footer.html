@@ -1,24 +1,41 @@
-<a class="js-go-to u-go-to-v1 animated" href="#!" data-type="fixed" data-position="{
-	&quot;bottom&quot;: 15,
-	&quot;right&quot;: 15
-  }" data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn" style="display: none; position: fixed; bottom: 15px; right: 15px; opacity: 0;">
-	<i class="mr-2 fa fa-angle-double-up wt-hover fontsize25 pb-0"></i>
-</a>
-
-<footer class="g-bg-black-opacity-0_8">
-	<div class="row">
-		<div class="col-md-4 text-center">
-			© Codeworx Software development and consulting 2020
+    <!-- Copyright Footer -->
+    <footer class="g-bg-gray-dark-v1 g-color-white-opacity-0_8 g-py-20">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-8 text-center text-md-left g-mb-10 g-mb-0--md">
+			  <div class="d-lg-flex">
+				<small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">2020 &copy; codeworx gmbh</small>
+				<ul class="u-list-inline">
+				  <li class="list-inline-item">
+					<a class="g-color-white-opacity-0_8 g-color-white--hover" href="{{ site.baseurl }}/Impressum">Impressum</a>
+				  </li>
+				  <li class="list-inline-item">
+					<span>|</span>
+				  </li>
+				  <li class="list-inline-item">
+					<a class="g-color-white-opacity-0_8 g-color-white--hover" href="{{ site.baseurl }}/Support">Support</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+  
+			<div class="col-md-4 align-self-center">
+			  <ul class="list-inline text-center text-md-right mb-0">
+			
+				{% for l in site.languages %}
+				<li class="list-inline-item g-mx-10" data-toggle="tooltip" data-placement="top" title="{{l}}">
+					<a href="{{ site.baseurl }}{{site.langlink[l]}}" class="g-color-white-opacity-0_5 g-color-white--hover">{{l}}</a>
+				</li>
+				{% endfor %}
+			  </ul>
+			</div>
+		  </div>
 		</div>
-		<div class="col-md-4 text-center">
-			<img class="img-50" src="{{ site.baseurl }}/Template/img/Logo.svg" alt="Image Description">
-		</div>
-		<div class="col-md-4 text-center">
-			<a href="{{ site.baseurl }}/Impressum">Impressum</a>
-			{% for l in site.languages %}
-			<a href="{{ site.baseurl }}{{site.langlink[l]}}">{{l}}</a>
-			{% endfor %}
-		
-		</div>
-	</div>
-</footer>
+	  </footer>
+	  <!-- End Copyright Footer -->
+	  <a class="js-go-to u-go-to-v1" href="#" data-type="fixed" data-position='{
+	   "bottom": 15,
+	   "right": 15
+	 }' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
+		<i class="hs-icon hs-icon-arrow-top"></i>
+	  </a>
