@@ -6,7 +6,4 @@ permalink: "/"
 landingpage: true
 ---
 
-{% assign items = site.landingpage | where: "lang", page.lang %}
-{% for lp in items %}
-{{lp}}
-{% endfor %}
+{% include landingpage.html lang=page.lang %}

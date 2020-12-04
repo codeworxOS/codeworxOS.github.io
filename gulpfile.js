@@ -7,6 +7,7 @@ var jsFiles = [
     'Template/vendor/gmaps/gmaps.min.js',
     'Template/vendor/appear.js',
     'Template/vendor/slick-carousel/slick/slick.js',
+    'Template/vendor/cubeportfolio-full/cubeportfolio/js/jquery.cubeportfolio.min.js',
     'Template/js/hs.core.js',
     'Template/js/components/hs.header.js',
     'Template/js/helpers/hs.hamburgers.js',
@@ -14,14 +15,18 @@ var jsFiles = [
     'Template/js/helpers/hs.height-calc.js',
     'Template/js/components/gmap/hs.map.js',
     'Template/js/components/hs.go-to.js',
-    'Template/js/components/hs.carousel.js'
+    'Template/js/components/hs.carousel.js',
+    'Template/js/components/hs.cubeportfolio.js'
 ]
 
 var styleFiles = [
     'Template/vendor/bootstrap/bootstrap.min.css',
     'Template/vendor/icon-hs/style.css',
+    'Template/vendor/icon-line/css/simple-line-icons.css',
+    'Template/vendor/icon-line-pro/style.css',
     'Template/vendor/hamburgers/hamburgers.min.css',
     'Template/vendor/animate.css',
+    'Template/vendor/cubeportfolio-full/cubeportfolio/css/cubeportfolio.min.css',
     'Template/vendor/slick-carousel/slick/slick.css',
     'Template/css/styles.op-accounting.css',
     'css/styles.main_ke.css',
@@ -33,6 +38,7 @@ var cssDest = 'css';
 
 var gulp = require('gulp');
 var concat = require('gulp-concat');
+var concatCss = require('gulp-concat-css');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
@@ -54,9 +60,9 @@ gulp.task('bundle:scripts', function () {
 
 gulp.task('bundle:styles', function () {
     return gulp.src(styleFiles)
-        .pipe(concat('styles.css'))
-        .pipe(gulp.dest(cssDest))
-        .pipe(rename('styles.min.css'))
-        .pipe(minifyCSS())
+        .pipe(concat('styles.css', {commonBase: 'css'}))
         .pipe(gulp.dest(cssDest));
+        // // .pipe(rename('styles.min.css'))
+        // // .pipe(minifyCSS())
+        // // .pipe(gulp.dest(cssDest));
 });

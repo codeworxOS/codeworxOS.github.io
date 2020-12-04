@@ -1,0 +1,4 @@
+{% assign items = site.landingpage | where: "lang", page.lang %}
+{% for lp in items %}
+{{lp}}
+{% endfor %}

@@ -2,54 +2,89 @@
 layout: default
 ---
 
-
-
-<div class="project">
-	<div class="imageHeader" style="background-image:url(images/HEADERprojekt.jpg);">
-		<div class="intro">
-			<h1 class="text-center">{{page.title}}</h1>
-			<p class="text-center text-muted">{{page.description}}</p>
-		</div>	
-	</div>
-	<div class="container">
-		<div>
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a class="a-breadcrumb" href="index.html">Projekte</a></li>
-				<li class="breadcrumb-item active">{{page.title}}</li>
-			</ol>
-			<p class="project-text text-justify">
-				{{page.content}}
-			</p>
-		</div>	
-	</div>
-	
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-6 bg-grey text-center">
-				<div class="row">
-					<div class="col-md-4">
-						<h3 class="text-uppercase">Client</h3>
-						<p class="client-name">{{page.client}}</p>
-					</div>
-					<div class="col-md-4">
-						<h3 class="text-uppercase">Designers</h3>
-						<p class="designer-name">{{page.developer}}</p>
-					</div>
-					<div class="col-md-4">
-						<h3 class="text-uppercase">Date</h3>
-						<p class="date-name">{{page.date}}</p>
-					</div>
-				</div>
-				
-				<div class="w3-panel w3-light-grey">
-					<span class="quotesign">❝</span>
-					<p class="w3-xlarge" style="margin-top:-40px"><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper.
-					Phasellus risus urna, ornare in aliquam id, porttitor sit amet sapien. Nulla facilisi.</i></p>
-					<p class="quotename">- Sandra Schwarz, CEO Jefferson</p>
-				</div>			
-			</div>
-	
-			<div class="col-md-6 p0 img-responsive"><img src="{{ site.baseurl }}/projects/images/{{page.image}}" alt="{{page.title}}" class="w100"/></div>
+    <!-- Portfolio Single Item -->
+    <section class="container g-py-100">
+		<!-- Carousel Images -->
+		<div class="js-carousel g-mb-50" 
+		data-arrows-classes="u-arrow-v1 g-absolute-centered--y g-width-40 g-height-40 g-font-size-default g-color-gray-dark-v5 g-bg-white g-color-white--hover g-bg-primary--hover rounded" 
+		data-arrow-left-classes="fa fa-angle-left g-left-20"
+		data-arrow-right-classes="fa fa-angle-right g-right-20">
+		{% for img in page.images %}
+			<img class="img-fluid" src="{{site.baseurl}}{{img}}" alt="{{img}}" />
+		{% endfor %}
 		</div>
-	</div>
-</div>
+		<!-- End Carousel Images -->
+  
+		<div class="row g-mb-70">
+		  <div class="col-md-8 g-mb-30">
+			<div class="mb-5">
+			  {{ content }}
+			</div>
+		  </div>
+  
+		  <div class="col-md-4 g-mb-30">
+			<!-- Client -->
+			<div class="mb-5">
+			  <h3 class="h5 g-color-black mb-3">Kunde:</h3>
+				  <img class="g-width-25 g-height-25 rounded-circle mr-2 mb-1" src="{{ site.baseurl }}/img/client/{{ page.client }}_100.png" alt="{{site.clients[page.client]}}" />{{site.clients[page.client]}}
+			</div>
+			<!-- End Client -->
+  
+			<!-- Designers -->
+			<div class="mb-5">
+			  <h3 class="h5 g-color-black mb-3">Mitarbeiter:</h3>
+			  <ul class="list-unstyled">
+				<li class="my-3">
+					{% for employee in page.employees %}
+				  <img class="g-width-25 g-height-25 rounded-circle mb-1 mr-2" src="{{ site.baseurl }}/img/employee/{{employee}}_100.png" alt="{{site.employees[employee]}}">
+				  <a class="g-color-gray-dark-v4 g-text-underline--none--hover" href="#">{{site.employees[employee]}}</a>
+				  	{% endfor %}
+				</li>
+			  </ul>
+			</div>
+			<!-- End Designers -->
+  
+			<!-- Tags -->
+			<div class="g-mb-30">
+			  <h3 class="h5 g-color-black mb-3">Tags:</h3>
+			  <ul class="u-list-inline mb-0">
+				{% for tag in page.tags %}
+				<li class="list-inline-item g-mb-10">
+				  <span class="u-tags-v1 g-color-main g-brd-around g-brd-gray-light-v3 g-bg-gray-dark-v2--hover g-brd-gray-dark-v2--hover g-color-white--hover g-rounded-50 g-py-4 g-px-15">{{tag}}</span>
+				</li>
+				{% endfor %}
+			  </ul>
+			</div>
+			<!-- End Tags -->
+  		  </div>
+		</div>
+  
+		<!-- Pagination -->
+		<nav class="text-center" aria-label="Page Navigation">
+		  <ul class="list-inline mb-0">
+			<li class="list-inline-item float-sm-left">
+			  <a class="u-pagination-v1__item u-pagination-v1-4 g-brd-gray-light-v3 g-brd-primary--hover g-rounded-50 g-pa-7-16" href="#" aria-label="Previous">
+				<span aria-hidden="true">
+				  <i class="fa fa-angle-left"></i>
+				  Previous
+				</span>
+			  </a>
+			</li>
+			<li class="list-inline-item mr-0">
+			  <a class="u-pagination-v1__item g-color-gray-dark-v4 g-font-size-20 g-py-2 g-px-10" href="#" data-toggle="tooltip" data-placement="top" title="View All">
+				<i class="icon-grid"></i>
+			  </a>
+			</li>
+			<li class="list-inline-item float-sm-right">
+			  <a class="u-pagination-v1__item u-pagination-v1-4 g-brd-gray-light-v3 g-brd-primary--hover g-rounded-50 g-pa-7-16" href="#" aria-label="Next">
+				<span aria-hidden="true">
+				  Next
+				  <i class="fa fa-angle-right"></i>
+				</span>
+			  </a>
+			</li>
+		  </ul>
+		</nav>
+		<!-- End Pagination -->
+	  </section>
+	  <!-- End Portfolio Single Item -->

@@ -26653,7 +26653,7 @@ pre[class*="language-"] .toolbar-item a {
 }
 
 .js-carousel {
-  background: url(../Template/img/preloaders/preloader-black.svg) no-repeat 50% 50%;
+  background: url(../../assets/img/preloaders/preloader-black.svg) no-repeat 50% 50%;
 }
 
 .js-carousel .js-next,

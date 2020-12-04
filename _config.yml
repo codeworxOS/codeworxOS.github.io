@@ -38,3 +38,8 @@ languages: [de,en]
 langlink:
   de: /
   en: /en
+clients:
+  orf: Österreichischer Rundfunk
+  insite: InsiteIT
+employees:
+  rasc: Raphael Schwarz
