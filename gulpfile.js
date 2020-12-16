@@ -20,15 +20,18 @@ var jsFiles = [
 ]
 
 var styleFiles = [
-    'Template/vendor/bootstrap/bootstrap.min.css',
+    'Template/vendor/bootstrap/bootstrap.css',
     'Template/vendor/icon-hs/style.css',
     'Template/vendor/icon-line/css/simple-line-icons.css',
     'Template/vendor/icon-line-pro/style.css',
-    'Template/vendor/hamburgers/hamburgers.min.css',
+    'Template/vendor/hamburgers/hamburgers.css',
     'Template/vendor/animate.css',
-    'Template/vendor/cubeportfolio-full/cubeportfolio/css/cubeportfolio.min.css',
+    'Template/vendor/cubeportfolio-full/cubeportfolio/css/cubeportfolio.css',
     'Template/vendor/slick-carousel/slick/slick.css',
     'Template/css/styles.op-accounting.css',
+    'Template/css/unify-core.css',
+    'Template/css/unify-components.css',
+    'Template/css/unify-globals.css',
     'css/styles.main_ke.css',
     'css/styles.main.custom.css'
 ]
@@ -42,6 +45,8 @@ var concatCss = require('gulp-concat-css');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var minifyCSS = require('gulp-minify-css');
+var purgecss = require('gulp-purgecss')
+
 
 
 gulp.task('watch', function () {
@@ -60,9 +65,35 @@ gulp.task('bundle:scripts', function () {
 
 gulp.task('bundle:styles', function () {
     return gulp.src(styleFiles)
-        .pipe(concat('styles.css', {commonBase: 'css'}))
+        .pipe(concatCss('styles.css', {commonBase: 'css'}))
         .pipe(gulp.dest(cssDest));
         // // .pipe(rename('styles.min.css'))
         // // .pipe(minifyCSS())
         // // .pipe(gulp.dest(cssDest));
 });
+
+gulp.task('bundle:styles:purge', () => {
+    return gulp.src('css/styles.css')
+        .pipe(purgecss({
+            content: ['**/*.html', '!Template/**/*'],
+            safelist: {
+            //     ['slick-track',
+            // 'slick-initialized',
+            // 'slick-slider',
+            // 'slick-slide',
+            // 'slick-cloned',
+            // 'slick-dotted', 
+            // 'slick-active', 
+            // 'slick-current', 
+            // 'slick-list', 
+            // 'draggable']
+                deep: [
+                    /^slick-/,
+                    /^cbp-/,
+                ]
+            }
+        }))
+        .pipe(rename('styles.min.css'))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('css'))
+})
