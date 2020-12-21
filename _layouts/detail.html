@@ -1,22 +1,23 @@
 ---
 layout: default
 ---
+
+ <!-- {% assign container = site[page.collection] | find: "name", "index.html" %} -->
+
     <section 
         class="g-bg-size-cover g-bg-pos-center g-bg-cover g-color-white g-py-50 g-mb-20" 
         style="background-image: url(/img/HOMEprojekte.jpg); margin-top:100px;">
-      <div class="container g-bg-cover__inner">
-            <div class="text-right detail-headline text-white">
-              <h2 class="g-font-weight-300 g-font-size-30"><span>{{ page.title }}</span></h2>
-              <h3 class="g-font-weight-300 g-font-size-30"><span>{{ page.description }}</span></h3>
-            </div>
-        <!-- <header>
-          <h3 class="h5 g-font-weight-300 g-mb-5">Breadcrumbs</h3>
-          <h2 class="h1 g-font-weight-300 text-uppercase">Maecenas
-            <span class="g-color-primary">enim</span>
-            sapien
-          </h2>
-        </header> -->
+      <ul>
+        {% for p in site[page.collection] %}
+        <li>{{p.basename}}</li>
+        {% endfor %}
+      </ul>
 
+      <div class="container g-bg-cover__inner">
+            <div class="text-left detail-headline text-white">
+              <h2 class="g-font-weight-300 g-font-size-30"><span>{{ page.title }}</span></h2>
+              <h3 class="g-font-weight-300 g-font-size-20"><span>{{ page.description }}</span></h3>
+            </div>
       </div>
     </section>
     <section>
@@ -27,11 +28,7 @@ layout: default
           <i class="fa fa-angle-right g-ml-7"></i>
         </li>
         <li class="list-inline-item g-mr-7">
-          <a class="u-link-v5 g-color-gray-light-v3 g-color-primary--hover" href="#">Pages</a>
-          <i class="fa fa-angle-right g-ml-7"></i>
-        </li>
-        <li class="list-inline-item g-color-primary">
-          <span>About Us</span>
+          <a class="u-link-v5 g-color-gray-light-v3 g-color-primary--hover" href="{{ page.collection }}">{{ page.collection }}</a>
         </li>
       </ul>
     </div>
