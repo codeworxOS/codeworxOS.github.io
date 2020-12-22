@@ -2,17 +2,18 @@
 layout: default
 ---
 
- <!-- {% assign container = site[page.collection] | find: "name", "index.html" %} -->
+{% assign collection = site[page.collection] |  %}
+<!-- {% assign parent = collection | find: "slug", "Index" %} -->
 
     <section 
         class="g-bg-size-cover g-bg-pos-center g-bg-cover g-color-white g-py-50 g-mb-20" 
         style="background-image: url(/img/HOMEprojekte.jpg); margin-top:100px;">
-      <ul>
-        {% for p in site[page.collection] %}
-        <li>{{p.basename}}</li>
-        {% endfor %}
-      </ul>
 
+        <ul>
+          {% for p in collection %}
+            <li>{{p.slug}}</li>
+          {% endfor %}
+        </ul>
       <div class="container g-bg-cover__inner">
             <div class="text-left detail-headline text-white">
               <h2 class="g-font-weight-300 g-font-size-30"><span>{{ page.title }}</span></h2>
@@ -28,7 +29,7 @@ layout: default
           <i class="fa fa-angle-right g-ml-7"></i>
         </li>
         <li class="list-inline-item g-mr-7">
-          <a class="u-link-v5 g-color-gray-light-v3 g-color-primary--hover" href="{{ page.collection }}">{{ page.collection }}</a>
+          <a class="u-link-v5 g-color-gray-light-v3 g-color-primary--hover" href="{{ parent.url }}">{{ parent.title }}</a>
         </li>
       </ul>
     </div>
