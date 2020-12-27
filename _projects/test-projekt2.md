@@ -2,11 +2,12 @@
 title: Insite LMS
 description: Kurze Projektbeschreibung
 client: insite
+category: arch
 employees:  [rasc]
 date: 2018-06-12
-images: [/projects/images/project2.jpg]
-lang: de
+images: [/img/projects/template/project2.jpg]
 tags: [C#, Xamarin, MS Sql, Angular, AspNetCore, WCF, Identity, SqLite, Sync]
+overview-image: /img/projects/template/overview.jpg
 ---
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   

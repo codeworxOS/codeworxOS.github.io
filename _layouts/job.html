@@ -1,0 +1,201 @@
+---
+layout: detail
+---
+
+<!-- Jobs Description -->
+<section class="g-py-20">
+    <div class="container">
+      <div class="row">
+        <!-- Content -->
+        <div class="col-lg-8 g-mb-30 g-mb-0--lg">
+          <article class="u-shadow-v11 rounded g-pa-30">
+            <!-- Content Header -->
+            <div class="row">
+              <div class="col-md-9 g-mb-30 g-mb-0--md">
+                <div class="media">
+                  <div class="d-flex align-self-center g-mt-3 g-mr-20">
+                    <img class="g-width-40 g-height-40" src="/Template/img/logo-500x500.png" alt="codeworx Logo">
+                  </div>
+                  <div class="media-body">
+                    <span class="d-block g-mb-3">
+                        <a class="u-link-v5 g-font-size-18 g-color-gray-dark-v1 g-color-primary--hover" href="">{{page.job}}</a>
+                      </span>
+                    <span class="g-font-size-13 g-color-gray-dark-v4 g-mr-15">
+                        <i class="icon-location-pin g-pos-rel g-top-1 mr-1"></i> Wels, AT
+                      </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 align-self-center text-md-right">
+                <a class="u-tags-v1 g-font-size-12 g-color-main g-brd-around g-brd-gray-light-v3 g-bg-gray-dark-v2--hover g-brd-gray-dark-v2--hover g-color-white--hover rounded g-py-3 g-px-8" href="#">{{ page.employmenttype }}</a>
+              </div>
+            </div>
+            <!-- End Content Header -->
+
+            <hr class="g-brd-gray-light-v4">
+
+            <!-- Jobs Description -->
+            <h3 class="h5 g-color-gray-dark-v1 g-mb-10">{{ site.data.translation[page.lang].jobs.job-description }}</h3>
+            {{ content }}
+
+            <!-- End Jobs Description -->
+
+            <hr class="g-brd-gray-light-v4">
+
+            <!-- Requirements -->
+            <h3 class="h5 g-color-gray-dark-v1 g-mb-10">{{ site.data.translation[page.lang].jobs.requirements }}</h3>
+
+            <div class="row">
+              <div class="col-lg">
+                <ul class="list-unstyled g-mb-12 g-mb-0--md">
+                  {% for requirement in page.requirements %}
+                  <li class="d-flex align-items-center g-mb-12">
+                    <i class="icon-check d-block g-color-primary g-mr-8"></i>
+                    <span class="d-block">{{ requirement }}</span>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            <!-- Requirements -->
+
+            <hr class="g-brd-gray-light-v4">
+
+            <!-- We offer -->
+            <h3 class="h5 g-color-gray-dark-v1 g-mb-10">{{ site.data.translation[page.lang].jobs.we-offer }}</h3>
+
+            <div class="row">
+              <div class="col-lg">
+                <ul class="list-unstyled g-mb-12 g-mb-0--md">
+                  {% for offer in page.offers %}
+                  <li class="d-flex align-items-center g-mb-12">
+                    <i class="icon-check d-block g-color-primary g-mr-8"></i>
+                    <span class="d-block">{{ offer }}</span>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            <!-- End We offer -->
+
+            <hr class="g-brd-gray-light-v4">
+
+            <!-- Offer Details & Skills -->
+            <div class="row">
+              <!-- Offer Details -->
+              <div class="col-lg g-mb-30 g-mb-0--lg">
+                <h3 class="h5 g-color-gray-dark-v1 g-mb-10">{{ site.data.translation[page.lang].jobs.offer-details }}</h3>
+                <ul class="list-unstyled mb-0">
+                  <li class="media g-mb-10">
+                    <span class="d-block g-color-gray-dark-v5 g-width-110">
+                        <i class="icon-wallet g-pos-rel g-top-1 g-mr-5"></i> {{ site.data.translation[page.lang].jobs.sallery }}:
+                      </span>
+                    <span class="media-body">{{ page.sallery }}</span>
+                  </li>
+                  <li class="media">
+                    <span class="d-block g-color-gray-dark-v5 g-width-110">
+                        <i class="icon-location-pin g-pos-rel g-top-1 g-mr-5"></i> {{ site.data.translation[page.lang].jobs.location }}:
+                      </span>
+                    <span class="media-body">{{ page.location }}</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- End Offer Details -->
+
+              <!-- Skills -->
+              <div class="col-lg">
+                <h3 class="h5 g-color-gray-dark-v1 g-mb-10">{{ site.data.translation[page.lang].jobs.skills }}</h3>
+                <ul class="list-inline mb-0">
+                  {% for skill in page.skills %}
+                  <li class="list-inline-item g-mb-10">
+                    <a class="u-tags-v1 g-font-size-13 g-color-main g-brd-around g-bg-gray-light-v5 g-bg-primary--hover g-color-white--hover rounded g-py-5 g-px-15" href="#">{{ skill }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <!-- End Skills -->
+            </div>
+            <!-- End Offer Details & Skills -->
+          </article>
+        </div>
+        <!-- End Content -->
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <aside class="u-shadow-v11 rounded g-pa-30">
+            <!-- Content Header -->
+            <div class="media g-mb-20">
+              <div class="d-flex align-self-center g-mt-3 g-mr-15">
+                <img class="g-width-40 g-height-40"  src="/Template/img/logo-500x500.png" alt="codeworx Logo">
+              </div>
+              <div class="media-body">
+                <span class="d-block">
+                    <a class="u-link-v5 g-font-size-18 g-color-gray-dark-v1 g-color-primary--hover" href="">codeworx gmbh</a>
+                  </span>
+              </div>
+            </div>
+            <!-- End Content Header -->
+
+            <!-- Google Map -->
+            <div id="gMap" class="js-g-map g-min-height-300" data-type="custom" data-lat="48.155354" data-lng="14.012777" data-zoom="12" data-title="Job Description" data-styles='[
+                   ["", "", [{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]],
+                   ["", "labels", [{"visibility":"on"}]],
+                   ["water", "", [{"color":"#bac6cb"}]]
+                 ]' data-pin="true" data-pin-icon="/Template/img/pin/red.png">
+            </div>
+            <!-- End Google Map -->
+
+            <hr class="g-brd-gray-light-v4">
+
+            <!-- Contacts -->
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-baseline g-mb-12">
+                <i class="icon-location-pin g-color-gray-dark-v5 g-mr-10"></i>
+                <span>Kienzlstra&szlig;e 13, 4600 Wels, AT</span>
+              </li>
+              <li class="d-flex align-items-baseline g-mb-10">
+                <i class="icon-phone g-color-gray-dark-v5 g-mr-10"></i>
+                <span>+43 676 333 50 10</span>
+              </li>
+              <li class="d-flex align-items-baseline g-mb-10">
+                <i class="icon-envelope g-color-gray-dark-v5 g-mr-10"></i>
+                <a class="u-link-v5 g-color-main g-color-primary--hover" href="mailto:office@codeworx.at">office@codeworx.at</a>
+              </li>
+            </ul>
+            <!-- End Contacts -->
+
+            <hr class="g-brd-gray-light-v4">
+
+            <!-- Social Links -->
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item g-mx-10" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                <a href="https://www.facebook.com/codeworxDev" target="_blank">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item g-mx-10" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+                <a href="#">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="list-inline-item g-mx-10" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                <a href="#">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+            </ul>
+            <!-- End Social Links -->
+
+            <hr class="g-brd-gray-light-v4">
+
+            <a class="btn btn-xl btn-block u-btn-primary text-uppercase g-font-weight-600 g-font-size-12" href="#">{{ site.data.translation[page.lang].jobs.apply-now }}</a>
+          </aside>
+        </div>
+        <!-- Sidebar -->
+      </div>
+    </div>
+  </section>
+  <!-- End Jobs Description -->
+
+  {% include single-item-pager.html %}

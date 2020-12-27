@@ -1,5 +1,3 @@
-{% assign items = site.promo | where: "lang", page.lang %}
-
 <!-- Main Banner -->
 <section id="{{page.ancor}}" class="js-carousel g-overflow-hidden g-max-height-100vh"
     data-autoplay="true"
@@ -7,7 +5,7 @@
     data-speed="15000"
     data-pagi-classes="u-carousel-indicators-v29 container text-center text-uppercase g-absolute-centered--x g-bottom-50 g-line-height-1_2 g-font-size-12 g-brd-gray-light-v3">
 
-{% for p in items %}
+{% for p in include.items %}
 
     <div class="js-slide" data-title="{{p.caption}}">
   <!-- Promo Block -->

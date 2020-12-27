@@ -1,0 +1,55 @@
+---
+layout: detail
+---
+{% assign collectionName = "jobs_" | append: page.lang%}
+{% assign jobs = site[collectionName] %}
+
+<section class="container g-py-20">
+    <div class="row g-mb-30">
+        {% for job in jobs %}        
+        <div class="col-lg-4 g-mb-30 g-mb-0--lg">
+        <!-- Recent Jobs -->
+        <article class="u-shadow-v11 rounded g-pa-25">
+            <h2 class="h4 g-mb-15">
+                <a class="u-link-v5 g-color-gray-dark-v1 g-color-primary--hover" href="{{ job.url | relative_url }}">{{ job.job }}</a>
+            </h2>
+
+            <!-- <p class="g-mb-15">{{ job.jobdescription }}</p> -->
+
+            <ul class="list-unstyled">
+            <li class="media g-mb-10">
+                <span class="d-block g-color-gray-dark-v5 g-width-110">
+                    <i class="icon-wallet g-pos-rel g-top-1 g-mr-5"></i> {{ site.data.translation[page.lang].jobs.sallery }}:
+                </span>
+                <span class="media-body">{{ job.sallery }}</span>
+            </li>
+            <li class="media g-mb-10">
+                <span class="d-block g-color-gray-dark-v5 g-width-110">
+                    <i class="icon-user g-pos-rel g-top-1 g-mr-5"></i> {{ site.data.translation[page.lang].jobs.skills }}:
+                </span>
+                <span class="media-body">{{ job.skills | join: ", " }}</span>
+            </li>
+            <li class="media">
+                <span class="d-block g-color-gray-dark-v5 g-width-110">
+                    <i class="icon-location-pin g-pos-rel g-top-1 g-mr-5"></i> {{ site.data.translation[page.lang].jobs.location }}:
+                </span>
+                <span class="media-body">{{ job.location }}</span>
+            </li>
+            </ul>
+
+            <hr class="g-brd-gray-light-v4">
+
+            <ul class="list-inline d-flex justify-content-between mb-0">
+            <li class="list-inline-item">
+                <a class="u-tags-v1 g-font-size-12 g-color-main g-brd-around g-brd-gray-light-v3 g-bg-gray-dark-v2--hover g-brd-gray-dark-v2--hover g-color-white--hover rounded g-py-3 g-px-8" href="#">{{ job.employmenttype }}</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="{{ job.url | relative_url }}">{{ site.data.translation[page.lang].jobs.see-details }}</a>
+            </li>
+            </ul>
+        </article>
+        <!-- End Recent Jobs -->
+        </div>
+        {% endfor %}
+    </div>
+</section> 

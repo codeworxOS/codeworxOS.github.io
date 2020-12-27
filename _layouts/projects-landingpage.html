@@ -1,0 +1,35 @@
+{% if page.lang == "de" %}
+    {% assign projects = site.projekte | reverse %}
+{% else %}
+    {% assign projects = site.projects | reverse %}
+{% endif %}
+
+<section id="{{page.ancor}}" class="container g-pt-100 g-pb-60">
+  <div class="text-center g-mb-60">
+    <div class="container g-max-width-770">
+      <h2 class="h2 g-color-gray-dark-v1 g-font-weight-600 mb-2">{{page.title}}</h2>
+      <div class="d-inline-block g-width-30 g-height-2 g-bg-primary mb-2"></div>
+      <div class="lead">
+          {{ content }}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    {% for project in projects limit:3 %}
+    <div class="col-sm-6 col-lg-4 g-mb-30">
+      <!-- Blog Grid Overlap Blocks -->
+      <article>
+        <img class="img-fluid w-100" src="{{ project.overview-image | relative_url }}" alt="{{project.title}}">
+        <div class="g-width-80x g-bg-white g-pos-rel g-z-index-1 g-pa-30 g-mt-minus-50 mx-auto">
+          <h2 class="h5 g-color-black g-font-weight-600 mb-3">
+              <a class="u-link-v5 g-color-black g-color-primary--hover g-cursor-pointer" href="{{ project.url | relative_url }}">{{project.title}}</a>
+            </h2>
+          <p class="g-color-gray-dark-v4 g-line-height-1_8">{{project.description}}</p>
+          <a class="g-font-size-13" href="{{ project.url | relative_url}}">{{ site.data.translation[page.lang].navigation.learn-more }}</a>
+        </div>
+      </article>
+      <!-- End Blog Grid Overlap Blocks -->
+    </div>
+    {% endfor %}
+  </div>
+</section>

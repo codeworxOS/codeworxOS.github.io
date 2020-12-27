@@ -77,6 +77,27 @@ gulp.task('bundle:styles:purge', () => {
         .pipe(purgecss({
             content: ['**/*.html', '!Template/**/*'],
             safelist: {
+                standard: [
+                    'u-btn-primary',
+                    'u-btn-red',
+                    'u-btn-lightred',
+                    'u-btn-darkred',
+                    'u-btn-blue',
+                    'u-btn-indigo',
+                    'u-btn-purple',
+                    'u-btn-darkpurple',	
+                    'u-btn-pink',
+                    'u-btn-orange',
+                    'u-btn-deeporange',	
+                    'u-btn-aqua',
+                    'u-btn-yellow',
+                    'u-btn-cyan',
+                    'u-btn-teal',
+                    'u-btn-brown',
+                    'u-btn-bluegray',
+                    'u-btn-darkgray',
+                    'u-btn-black'
+                ],
             //     ['slick-track',
             // 'slick-initialized',
             // 'slick-slider',

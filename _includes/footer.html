@@ -22,9 +22,9 @@
 			<div class="col-md-4 align-self-center">
 			  <ul class="list-inline text-center text-md-right mb-0">
 			
-				{% for l in site.languages %}
-				<li class="list-inline-item g-mx-10" data-toggle="tooltip" data-placement="top" title="{{l}}">
-					<a href="{{ site.baseurl }}{{site.langlink[l]}}" class="g-color-white-opacity-0_5 g-color-white--hover">{{l}}</a>
+				{% for l in site.data.languages %}
+				<li class="list-inline-item g-mx-10" data-toggle="tooltip" data-placement="top" title="{{l.lang}}">
+					<a href="{{ site.baseurl }}{{l.path}}" class="g-color-white-opacity-0_5 g-color-white--hover">{{l.lang}}</a>
 				</li>
 				{% endfor %}
 			  </ul>

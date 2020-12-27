@@ -1,0 +1,12 @@
+projekte:
+  path: /projekte
+  label: "Projekte"
+projects:
+  path: /projects
+  label: "our Projects"
+jobs_de:
+  path: /karriere
+  label: "Karriere"
+jobs_en:
+  path: /jobs
+  label: "Jobs"

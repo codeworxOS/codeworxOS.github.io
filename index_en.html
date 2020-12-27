@@ -3,6 +3,10 @@ layout: default
 description: 
 lang: en 
 permalink: "/en" 
+landingpage: true
 ---
 
-{% include landingpage.html %}
+{% assign items = site.landingpage_en %}
+{% for lp in items %}
+{{lp}}
+{% endfor %}

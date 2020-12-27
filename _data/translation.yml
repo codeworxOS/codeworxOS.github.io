@@ -1,0 +1,32 @@
+de:
+  navigation:
+    previous: "zurück"
+    next: "vor"
+    view-all: "Übersicht"
+    learn-more: "mehr Info..."
+  jobs:
+    apply-now: "jetzt bewerben"
+    job-description: "Stellenbeschreibung"
+    we-offer: "Was wir bieten"
+    requirements: "Was wir suchen"
+    offer-details: "Details"
+    skills: "Fähigkeiten"
+    sallery: "Gehalt"
+    location: "Dienstort"
+    see-details: "details"
+en:
+  navigation:
+    previous: "previous"
+    next: "next"
+    view-all: "View All"
+    learn-more: "more info..."
+  jobs:
+    apply-now: "Apply now"
+    job-description: "Job description"
+    we-offer: "What we offer"
+    requirements: "Requirements"
+    offer-details: "Offer Details"
+    skills: "Skills"
+    sallery: "Sallery"
+    location: "Location"
+    see-details: "see details"

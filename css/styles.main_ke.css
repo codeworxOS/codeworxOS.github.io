@@ -485,8 +485,8 @@ a:hover {
 .u-btn-primary:hover,
 .u-btn-primary.active,
 .u-btn-primary.cbp-filter-item-active {
-  border-color: #cf1c18;
-  background-color: #cf1c18;
+  border-color: #a11613;
+  background-color: #a11613;
 }
 .u-btn-primary.u-btn-hover-v1-1::after,
 .u-btn-primary.u-btn-hover-v1-1:hover::after,
@@ -500,7 +500,7 @@ a:hover {
 .u-btn-primary.u-btn-hover-v2-1:hover::after,
 .u-btn-primary.u-btn-hover-v2-2::after,
 .u-btn-primary.u-btn-hover-v2-2:hover::after {
-  background-color: #b81916;
+  background-color: #a11613;
 }
 .u-btn-primary.u-btn-hover-v1-1:hover,
 .u-btn-primary.u-btn-hover-v1-2:hover,

@@ -1,0 +1,10 @@
+- name: dev
+  label:
+    de: Dev
+    en: dev
+  color: teal
+- name: arch
+  label:
+    de: Arch
+    en: arch
+  color: darkpurple
