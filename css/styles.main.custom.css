@@ -86,3 +86,8 @@ img.client-list:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
 }
+
+pre 
+{
+  padding: 1rem;
+}
