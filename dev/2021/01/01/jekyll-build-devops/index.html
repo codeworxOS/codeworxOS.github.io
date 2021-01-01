@@ -14,7 +14,7 @@
 
 <meta name="keywords" content="codeworx, codeworx.at, Schwarz, Raphael, Raphael Schwarz, .NET, C#, Software-Entwicklung" />
 <meta name="description" content="
-GitHub stellt dem technisch versierten Anwender mit seinen Github Pages ein sehr effizientes Werkzeug zur Verfügung, um schnell und einfach einen Internetauftritt erstellen zu können. Die zugrundelegende Technologie ist ein auf Ruby basierender “static site generator” namens Jekyll. Das spezielle Setup das Github hierbei verwendet bringt allerdings einige Limitierungen mit sich.
+GitHub stellt dem technisch versierten Anwender mit seinen Github Pages ein sehr effizientes Werkzeug zur Verfügung, um schnell und einfach einen Internetauftritt erstellen zu können. Die zugrundeliegende Technologie ist ein auf Ruby basierender “static site generator” namens Jekyll. Das spezielle Setup, welches Github verwendet, bringt allerdings einige Limitierungen mit sich.
 
 " />
 <meta name="author" content="codeworx" />
@@ -23,7 +23,7 @@ GitHub stellt dem technisch versierten Anwender mit seinen Github Pages ein sehr
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Jekyll CI/CD mit Azure DevOps" />
 <meta property="og:description" content="
-GitHub stellt dem technisch versierten Anwender mit seinen Github Pages ein sehr effizientes Werkzeug zur Verfügung, um schnell und einfach einen Internetauftritt erstellen zu können. Die zugrundelegende Technologie ist ein auf Ruby basierender “static site generator” namens Jekyll. Das spezielle Setup das Github hierbei verwendet bringt allerdings einige Limitierungen mit sich.
+GitHub stellt dem technisch versierten Anwender mit seinen Github Pages ein sehr effizientes Werkzeug zur Verfügung, um schnell und einfach einen Internetauftritt erstellen zu können. Die zugrundeliegende Technologie ist ein auf Ruby basierender “static site generator” namens Jekyll. Das spezielle Setup, welches Github verwendet, bringt allerdings einige Limitierungen mit sich.
 
 " />
 
@@ -185,7 +185,7 @@ data-header-fix-moment-classes="g-bg-black-opacity-0_8 g-py-10">
 	<div>
 	<div class="g-pa-50 g-pt-0 g-px-100--lg g-pb-20">
 	  <div class="mb-5">
-		<p class="g-color-black g-font-weight-600 g-font-size-16">Der Artikel zeigt wie Sie mithilfe einer Azure DevOps CI/CD Pipeline, einen mittels Jekyll erstellten Webauftritt, builden und automatisiert auf ein GitHub Pages Repository deployen können.</p>
+		<p class="g-color-black g-font-weight-600 g-font-size-16">Der Artikel zeigt, wie Sie mithilfe einer Azure DevOps CI/CD Pipeline, einen mittels Jekyll erstellten Webauftritt, builden und automatisiert auf ein GitHub Pages Repository deployen können.</p>
 	  </div>
 
 	  <!-- Author -->
@@ -232,15 +232,15 @@ data-header-fix-moment-classes="g-bg-black-opacity-0_8 g-py-10">
 	  <!-- End Author -->
 
 	  
-<p>GitHub stellt dem technisch versierten Anwender mit seinen <a href="https://pages.github.com/" target="_blank">Github Pages</a> ein sehr effizientes Werkzeug zur Verfügung, um schnell und einfach einen Internetauftritt erstellen zu können. Die zugrundelegende Technologie ist ein auf Ruby basierender “static site generator” namens Jekyll. Das spezielle Setup das Github hierbei verwendet bringt allerdings einige Limitierungen mit sich.</p>
+<p>GitHub stellt dem technisch versierten Anwender mit seinen <a href="https://pages.github.com/" target="_blank">Github Pages</a> ein sehr effizientes Werkzeug zur Verfügung, um schnell und einfach einen Internetauftritt erstellen zu können. Die zugrundeliegende Technologie ist ein auf Ruby basierender “static site generator” namens Jekyll. Das spezielle Setup, welches Github verwendet, bringt allerdings einige Limitierungen mit sich.</p>
 
 <!--more-->
 
-<p>Eine der problematischeren Limitierungen ist, dass nur eine sehr eingeschränkte Liste an <a href="https://pages.github.com/versions">Jekyll Plugins</a> unterstützt werden. Benötigt man ein Plugin das nicht aufgelistet ist, wie z.B. das relativ verbreitete <a href="https://github.com/sverrirs/jekyll-paginate-v2">jekyll-paginate-v2</a> Modul, muss man im Gegenzug dafür auf die automatisierte Deployment Pipeline von Github Pages verzichten. Mehr oder weniger nativ, lässt sich z.B. TravisCI, als individuelle CI Pipeline, in das Github Pages Repository integrieren. Mein Lösungsansatz, da ich bereits über einen Azure DevOps account verfüge und auch mit dem CI/CD System vertraut bin, ist, das Jekyll Projekt in einem DevOps repository zu verwalten und durch einen Build Pipeline den generierten Output auf Github Pages zu pushen.</p>
+<p>Eine der problematischeren Limitierungen ist, dass nur eine sehr eingeschränkte Liste an <a href="https://pages.github.com/versions">Jekyll Plugins</a> unterstützt werden. Benötigt man ein Plugin, das nicht aufgelistet ist, wie z.B. das relativ verbreitete <a href="https://github.com/sverrirs/jekyll-paginate-v2">jekyll-paginate-v2</a> Modul, muss man im Gegenzug dafür auf die automatisierte Deployment Pipeline von Github Pages verzichten. Mehr oder weniger nativ lässt sich z.B. TravisCI als individuelle CI Pipeline in das Github Pages Repository integrieren. Mein Lösungsansatz, da ich bereits über einen Azure DevOps account verfüge und auch mit dem CI/CD System vertraut bin, ist, das Jekyll Projekt in einem DevOps repository zu verwalten und durch eine Build Pipeline den generierten Output auf Github Pages zu pushen.</p>
 
 <h2 id="lokale-entwicklungsumgebung">Lokale Entwicklungsumgebung</h2>
 
-<p>Für die lokale Entwicklungsumgebung verwende ich einen Docker Container der von Jekyll direkt zur verfügung gestellt wird. Durch das einfügen des folgenden <code class="language-csharp highlighter-rouge"><span class="n">docker</span><span class="p">-</span><span class="n">componse</span><span class="p">.</span><span class="n">yml</span></code> files im root Verzeichnis der Jekyll Anwendung kann anschließend mittels der docker compose CLI <code class="language-csharp highlighter-rouge"><span class="n">docker</span><span class="p">-</span><span class="n">compose</span> <span class="n">up</span></code> ein fertiger konfigurierter Jekyll container gestartet werden.</p>
+<p>Für die lokale Entwicklungsumgebung verwende ich einen Docker Container der von Jekyll direkt zur Verfügung gestellt wird. Durch das Einfügen des folgenden <code class="language-csharp highlighter-rouge"><span class="n">docker</span><span class="p">-</span><span class="n">componse</span><span class="p">.</span><span class="n">yml</span></code> files im root Verzeichnis der Jekyll Anwendung kann anschließend mittels der docker compose CLI <code class="language-csharp highlighter-rouge"><span class="n">docker</span><span class="p">-</span><span class="n">compose</span> <span class="n">up</span></code> ein fertiger konfigurierter Jekyll Container gestartet werden.</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
 <span class="na">services</span><span class="pi">:</span>
@@ -252,9 +252,9 @@ data-header-fix-moment-classes="g-bg-black-opacity-0_8 g-py-10">
     <span class="na">volumes</span><span class="pi">:</span>
         <span class="pi">-</span> <span class="s">.:/srv/jekyll</span>
 </code></pre></div></div>
-<p>Der erste start kann ein paar minuten dauern, da das passende Docker image noch geladen werden muss. Wenn der Container erfolgreich gestartet wurde, sollte der output in etwa so aussehen.</p>
+<p>Der erste Start kann ein paar Minuten dauern, da das passende Docker image noch geladen werden muss. Wenn der Container erfolgreich gestartet wurde, sollten die Ausgaben in etwa so aussehen.</p>
 
-<p><img src="/img/posts/jekyll-devops/console.jpg" alt="compose output" title="Jekyll container compose output" /></p>
+<p><img src="/img/posts/jekyll-devops/console.jpg" alt="compose output" title="Jekyll container compose Output" /></p>
 
 <p>Die generierte Seite sollte nun mittels http://localhost:4000 erreichbar sein.</p>
 
@@ -293,7 +293,7 @@ data-header-fix-moment-classes="g-bg-black-opacity-0_8 g-py-10">
     <span class="na">publishLocation</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Container'</span>
 </code></pre></div></div>
 
-<p>Auch hier verwenden wir wieder einen Docker container <code class="language-csharp highlighter-rouge"><span class="n">jekyll</span><span class="p">/</span><span class="n">builder</span><span class="p">:</span><span class="m">4.2</span><span class="p">.</span><span class="m">0</span></code> um ein korrektes Jekyll Setup zu erhalten.
+<p>Auch hier verwenden wir wieder einen Docker Container <code class="language-csharp highlighter-rouge"><span class="n">jekyll</span><span class="p">/</span><span class="n">builder</span><span class="p">:</span><span class="m">4.2</span><span class="p">.</span><span class="m">0</span></code>, um ein korrektes Jekyll Setup zu erhalten.
 Der Build Prozess hat zwei Teilschritte.</p>
 
 <ol>
@@ -306,7 +306,7 @@ Erstellen Sie dazu eine neue Build Pipeline.</p>
 
 <p><img src="/img/posts/jekyll-devops/build-pipe1.jpg" alt="DevOps Build create" title="Build Pipeline Step 1" /></p>
 
-<p>Selektieren Sie nun Das verwendete Repository und wählen im Nächsten Schritt “Existing Azure Pipeline YAML file”.</p>
+<p>Selektieren Sie nun das verwendete Repository und wählen im nächsten Schritt “Existing Azure Pipeline YAML file”.</p>
 
 <p><img src="/img/posts/jekyll-devops/build-pipe2.jpg" alt="DevOps Build select pipeline" title="Build Pipeline Step 2" /></p>
 
@@ -320,9 +320,9 @@ Erstellen Sie dazu eine neue Build Pipeline.</p>
 
 <h2 id="release-pipeline">Release Pipeline</h2>
 
-<p>Um die erstellten Dateien nun in das eigentliche GitHub Pages repository zu laden wird eine Release Pipeline auf basis de zuvor erstellten Build Outputs angelegt.
-Als Synchronisations Task fiel mein Wahl auf eine frei verfügbare Extension <a href="https://marketplace.visualstudio.com/items?itemName=AccidentalFish.githubpages-publish">GitHub Pages Publish</a>.
-Alternativ kann man natürlich auch selbst ein kleines Script schreiben um diese Aufgabe zu erledigen.</p>
+<p>Um die erstellten Dateien nun in das eigentliche GitHub Pages repository zu laden, wird eine Release Pipeline auf Basis der zuvor erstellten Build Outputs angelegt.
+Als Synchronisations Task fiel meine Wahl auf eine frei verfügbare Extension <a href="https://marketplace.visualstudio.com/items?itemName=AccidentalFish.githubpages-publish">GitHub Pages Publish</a>.
+Alternativ kann man natürlich auch selbst ein kleines Script schreiben, um diese Aufgabe zu erledigen.</p>
 
 <p><img src="/img/posts/jekyll-devops/release-pipe.jpg" alt="Release Pipeline" title="Release Pipeline" /></p>
 
