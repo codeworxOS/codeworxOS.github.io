@@ -5,17 +5,33 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>codeworx.at</title>
+<title>codeworx</title>
 
 
-<meta name="keywords" content="codeworx, codeworx.at, Schwarz, Raphael, Raphael Schwarz, .NET, C#, Software-Entwicklung" /> 
+
+
+
+
+<meta name="keywords" content="codeworx, codeworx.at, Schwarz, Raphael, Raphael Schwarz, .NET, C#, Software-Entwicklung" />
 <meta name="description" content="{% assign items = site.landingpage_en %}
 {% for lp in items %}
 {{lp}}
 {% endfor %}
-" /> 
-
+" />
 <meta name="author" content="codeworx" />
+
+<meta property="og:url" content="https://www.codeworx.at/en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="{% assign items = site.landingpage_en %}
+{% for lp in items %}
+{{lp}}
+{% endfor %}
+" />
+
+<meta property='og:image:width' content='600'/><meta property='og:image:height' content='600'/>
+<meta property="og:image" content="https://www.codeworx.at/img/banner.jpg" />
+
 
 <!-- Mobile Metas -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -111,20 +127,32 @@ data-header-fix-moment-classes="g-bg-black-opacity-0_8 g-py-10">
 
 			
 
+
+
 <!-- Main Banner -->
-<section id="home" class="js-carousel g-overflow-hidden g-max-height-100vh" data-autoplay="true" data-infinite="true" data-speed="15000" data-pagi-classes="u-carousel-indicators-v29 container text-center text-uppercase g-absolute-centered--x g-bottom-50 g-line-height-1_2 g-font-size-12 g-brd-gray-light-v3">
+<section id="home" class="js-carousel g-overflow-hidden g-max-height-100vh"
+    data-autoplay="true"
+    data-infinite="true"
+    data-speed="15000"
+    data-pagi-classes="u-carousel-indicators-v29 container text-center text-uppercase g-absolute-centered--x g-bottom-50 g-line-height-1_2 g-font-size-12 g-brd-gray-light-v3">
 
 
 
-    <div class="js-slide" data-title="Blog">
+    <div class="js-slide" data-title="News">
   <!-- Promo Block -->
   <div class="g-flex-centered g-height-100vh g-min-height-500--md g-bg-cover g-bg-pos-center g-bg-img-hero promo-image" style="background-image: url('img/HOMEblog.jpg');">
     <div class="container position-relative promo-container">
       <div class="promo-content text-right">
-        <h2 class="g-font-weight-300 g-font-size-30 text-white g-mr-10"><span>Codeworx.Identity<br />
-Version 1.0.0 beta1 jetzt online<br />
+        <h2 class="g-font-weight-300 g-font-size-30 text-white g-mr-10"><span>Azure DevOps<br />
+Jekyll Build Pipeline<br />
 </span></h2>
-        <a class="btn btn-lg u-btn-primary g-font-weight-300 g-font-size-16 g-rounded-50 g-px-30 g-py-10" href="/#projekte">mehr Info</a>
+        
+          
+          
+        <a class="btn btn-lg u-btn-primary g-font-weight-300 g-font-size-16 g-rounded-50 g-px-30 g-py-10" href="
+            /dev/2020/12/31/jekyll-build-devops/
+          ">mehr Info</a>
+        
       </div>
     </div> 
   </div>
@@ -138,10 +166,12 @@ Version 1.0.0 beta1 jetzt online<br />
   <div class="g-flex-centered g-height-100vh g-min-height-500--md g-bg-cover g-bg-pos-center g-bg-img-hero promo-image" style="background-image: url('img/HOMEprojekte.jpg');">
     <div class="container position-relative promo-container">
       <div class="promo-content text-right">
-        <h2 class="g-font-weight-300 g-font-size-30 text-white g-mr-10"><span>ORF<br />
-TextAktuell<br />
-</span></h2>
-        <a class="btn btn-lg u-btn-primary g-font-weight-300 g-font-size-16 g-rounded-50 g-px-30 g-py-10" href="#projekte">mehr Info</a>
+        <h2 class="g-font-weight-300 g-font-size-30 text-white g-mr-10"><span></span></h2>
+        
+          
+          
+        <a class="btn btn-lg u-btn-primary g-font-weight-300 g-font-size-16 g-rounded-50 g-px-30 g-py-10" href="/projekte">zu den Projekten</a>
+        
       </div>
     </div> 
   </div>
@@ -156,7 +186,11 @@ TextAktuell<br />
     <div class="container position-relative promo-container">
       <div class="promo-content text-right">
         <h2 class="g-font-weight-300 g-font-size-30 text-white g-mr-10"><span>Karriere bei codeworx</span></h2>
+        
+          
+          
         <a class="btn btn-lg u-btn-primary g-font-weight-300 g-font-size-16 g-rounded-50 g-px-30 g-py-10" href="/karriere">offene Stellen</a>
+        
       </div>
     </div> 
   </div>
@@ -167,7 +201,6 @@ TextAktuell<br />
 
 </section>
 <!-- End Main Banner -->
-
 
       <!-- Section Content -->
       <section id="about">
@@ -485,29 +518,9 @@ TextAktuell<br />
 			
 			<article>
 				<h3 class="h6 g-mb-2">
-				<a class="g-color-white-opacity-0_8 g-color-white--hover" href="/org/2020/12/30/neue-website/">Neuer Internetauftritt</a>
+				<a class="g-color-white-opacity-0_8 g-color-white--hover" href="/dev/2020/12/31/jekyll-build-devops/">Jekyll CI/CD mit Azure DevOps</a>
 				</h3>
-				<div class="small g-color-white-opacity-0_6">30 December 2020</div>
-			</article>
- 			
-			
-			<hr class="g-brd-white-opacity-0_1 g-my-10">
-			
-			<article>
-				<h3 class="h6 g-mb-2">
-				<a class="g-color-white-opacity-0_8 g-color-white--hover" href="/efc/2020/12/03/ef-core-bulk/">EF Core Bulk Extensions - Package</a>
-				</h3>
-				<div class="small g-color-white-opacity-0_6">03 December 2020</div>
-			</article>
- 			
-			
-			<hr class="g-brd-white-opacity-0_1 g-my-10">
-			
-			<article>
-				<h3 class="h6 g-mb-2">
-				<a class="g-color-white-opacity-0_8 g-color-white--hover" href="/sync/2020/12/02/codeworx-sync/">Codeworx Sync .net 5 Support</a>
-				</h3>
-				<div class="small g-color-white-opacity-0_6">02 December 2020</div>
+				<div class="small g-color-white-opacity-0_6">31 December 2020</div>
 			</article>
  			
 
