@@ -130489,3 +130489,7 @@ pre {
 .detail-content h3 {
   font-size: 1.75rem;
 }
+
+.detail-content img {
+  max-width: 100%;
+}
